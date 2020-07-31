@@ -40,11 +40,11 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #5A5B61;
+  background-color: #00a2e8;
 }
 
-.unactive {
-  background-color: #35838A;
+.active {
+  background-color: #005e8a;
 }
 
 
@@ -124,3 +124,8 @@ iframe{
   margin-bottom: 0px;
   max-width: 100%;
   height: auto;
+}
+
+.logo {
+background-color: white;  
+}
