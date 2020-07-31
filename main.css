@@ -126,6 +126,23 @@ iframe{
   height: auto;
 }
 
-.logo {
-background-color: white;  
+img.logo {
+max-width: 25%;
+padding: 0;
+}
+
+nav.navigation {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+  overflow: hidden;
+  background-color: #444444;
+  min-width: 100px;
+  /*max-width: 1000px;*/
+  /*position: fixed;*/
+  top: 0;
+  width: 100%;
+  float:left;
+  border-radius: 25px;
+  height: 150px;
 }
