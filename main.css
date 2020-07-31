@@ -19,7 +19,7 @@ ul {
   overflow: hidden;
   background-color: black;
   min-width: 100px;
-  max-width: 1000px;
+  /*max-width: 1000px;*/
   position: fixed;
   top: 0;
   width: 100%;
