@@ -129,6 +129,8 @@ iframe{
 img.logo {
 max-width: 25%;
 padding: 0;
+background-color: white;
+border-radius: 10px;
 }
 
 nav.navigation {
