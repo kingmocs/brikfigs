@@ -8,6 +8,7 @@
   <meta name="Author" content="Alex King"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
@@ -43,76 +44,110 @@
 
 <body>
   <div class="gallery">
-  <div class="logo">
-    <img src="images/brikfigslogo.png" alt="BrikFigs Logo">
-  </div>
+    <div class="logo">
+      <img onclick="idFunction()"src="images/brikfigslogo.png" alt="BrikFigs Logo">
+    </div>
 
   <!-- Portfolio Gallery Grid -->
-  <div class="row">
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/scarecrow.png" alt="Mountains">
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-01" src="images/scarecrow.png" alt="Scarecrow">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-02" src="images/football_pLayer.png" alt="Lights">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-03" src="images/king.png" alt="Nature">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-04" src="images/victorians.png" alt="Mountains">
+        </div>
       </div>
     </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/football_pLayer.png" alt="Lights">
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-05" src="images/queen.png" alt="Mountains">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-06" src="images/mariachi_band.png" alt="Lights">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-07" src="images/clown.png" alt="Nature">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-08" src="images/ghost.png" alt="Mountains">
+        </div>
       </div>
     </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/king.png" alt="Nature">
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-09" src="images/dirt_bike_rider.png" alt="Mountains">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-10" src="images/leprechaun.png" alt="Lights">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-11" src="images/cupid.png" alt="Nature">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img class="gallery-image" id="gal-12" src="images/skeleton.png" alt="Mountains">
+        </div>
       </div>
     </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/victorians.png" alt="Mountains">
-      </div>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("gal-01");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
   </div>
-  <div class="row">
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/queen.png" alt="Mountains">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/mariachi_band.png" alt="Lights">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/clown.png" alt="Nature">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/ghost.png" alt="Mountains">
-      </div>
-    </div>
+
+  <div class="motion">
   </div>
-  <div class="row">
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/dirt_bike_rider.png" alt="Mountains">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/leprechaun.png" alt="Lights">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/cupid.png" alt="Nature">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img class="galler-image" src="images/skeleton.png" alt="Mountains">
-      </div>
-    </div>
+
+  <div class="U">
   </div>
 <h1>Home</h1>
 </body>
