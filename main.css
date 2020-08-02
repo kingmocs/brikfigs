@@ -63,18 +63,17 @@ iframe{
 .topnav{
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  padding: 10px;
   overflow: hidden;
   background-color: #777777;
   border-radius: 25px;
   max-height: 100px;
-  height: auto;
 }
 
-.topnav a{
+.topnav a:not(.logo-icon){
+  margin: auto;
+  float: center;
+  align-items: center;
+  text-align: center;
   font-family: "DIN Alternate", sans-serif;
   color: white;
   transition: all 0.2s ease;
@@ -83,9 +82,13 @@ iframe{
   font-size: 25pt;
   padding: 14px 16px;
 }
+.topnav a .logo-icon{
+  float: left;
+}
 
-.topnav img {
-  object-fit: fill;
+.topnav a img {
+  margin: auto;
+  object-fit: scale-down;
   max-height: 80px;
 }
 
@@ -97,7 +100,7 @@ iframe{
   display: none;
 }
 
-.topnav a:not(.icon):hover {
+.topnav a:not(.logo-icon):hover {
   background-color: #005e8a;
   border-radius: 10px 10px 10px 10px;;
 }
@@ -107,7 +110,6 @@ iframe{
   .topnav a.icon {
     float: right;
     display: flex;
-    hight: auto;
   }
 }
 
