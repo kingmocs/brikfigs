@@ -8,6 +8,7 @@
   <meta name="Author" content="Alex King"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -16,8 +17,8 @@
 </head>
 
 <header>
-  <nav>
-    <a class="icon" href="index.html">
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">
       <img src="images/brikfigs_head.png" alt="logo">
     </a>
     <a class="active" href="index.html">Home</a>
@@ -25,7 +26,20 @@
     <a href="U.html">BrikFigsU</a>
     <a href="motion.html">BrikFigs Motion</a>
     <a href="about.html">About</a>
-  </nav>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
 </header>
 
 <body>

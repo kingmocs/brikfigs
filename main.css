@@ -60,10 +60,11 @@ iframe{
 
 
 /*Navigation Bar -------------------------------------------------------------*/
-nav{
+.topnav{
   max-width: 1200px;
   margin: auto;
   display: flex;
+  text-align: center;
   align-items: center;
   padding: 10px;
   overflow: hidden;
@@ -73,7 +74,7 @@ nav{
   height: auto;
 }
 
-nav a{
+.topnav a{
   font-family: "DIN Alternate", sans-serif;
   color: white;
   transition: all 0.2s ease;
@@ -83,7 +84,7 @@ nav a{
   padding: 14px 16px;
 }
 
-nav img {
+.topnav img {
   object-fit: fill;
   max-height: 80px;
 }
@@ -92,16 +93,35 @@ nav img {
   background-color: #00a2e8;
   border-radius: 10px 10px 10px 10px;
 }
+.topnav .icon{
+  display: none;
+}
 
-nav a:not(.icon):hover {
+.topnav a:not(.icon):hover {
   background-color: #005e8a;
   border-radius: 10px 10px 10px 10px;;
 }
 
 @media screen and (max-width: 1000px) {
-  nav a:not(:first-child) {
-    display:none;
-    background-color: green;
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: flex;
+    hight: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 /*Gallery---------------------------------------------------------------------*/
