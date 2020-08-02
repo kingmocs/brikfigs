@@ -66,10 +66,10 @@ iframe{
   overflow: hidden;
   background-color: #777777;
   border-radius: 25px;
-  max-height: 100px;
+  /*max-height: 100px;*/
 }
 
-.topnav a:not(.logo-icon){
+.topnav a{
   margin: auto;
   float: center;
   align-items: center;
@@ -82,40 +82,38 @@ iframe{
   font-size: 25pt;
   padding: 14px 16px;
 }
-.topnav a .logo-icon{
-  float: left;
-}
 
-.topnav a img {
+/*.topnav a img {
   margin: auto;
-  object-fit: scale-down;
+  object-fit: cover;
   max-height: 80px;
-}
+}*/
 
 .active {
   background-color: #00a2e8;
   border-radius: 10px 10px 10px 10px;
 }
-.topnav .icon{
+
+.topnav .menu{
   display: none;
 }
 
-.topnav a:not(.logo-icon):hover {
+.topnav a:hover {
   background-color: #005e8a;
   border-radius: 10px 10px 10px 10px;;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
+  .topnav a.menu {
     float: right;
-    display: flex;
+    display: block;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
+  .topnav.responsive .menu {
     position: absolute;
     right: 0;
     top: 0;
@@ -181,6 +179,7 @@ h1 {
   background-color: #cccccc;
   padding: 10px;
   border-radius: 25px;
+  transition-timing-function: ease;
   transition-duration: .5s;
   transition-delay: .1s;
 }
