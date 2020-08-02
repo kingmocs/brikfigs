@@ -3,39 +3,6 @@ html{
   background-color: #aaaaaa;
 }
 
-/*header{
-    border-bottom: solid #35838A;
-} */
-.mw{
-  color: white;
-  font-size: 25pt;
-  padding-left: 20px;
-  padding-top: 5px;
-}
-
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 15pt;
-}
-
-.MariaWinder{
-    padding-top: 40px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    font-size: 30pt;
-    display: inline-block;
-    color: #333;
-}
-
 body{
   text-align: left;
   /*font-family: 'Poiret One', cursive;*/
@@ -58,7 +25,6 @@ iframe{
   padding: 0;
 }
 
-
 /*Navigation Bar -------------------------------------------------------------*/
 header{
   position:absolute;
@@ -74,20 +40,18 @@ header{
   background-color: #777777;
   border-radius: 25px;
   z-index: 2;
-  /*max-height: 100px;*/
 }
 
 .topnav a{
   margin: auto;
   float: center;
-  align-items: center;
   text-align: center;
   font-family: "DIN Alternate", sans-serif;
   color: white;
   transition: all 0.2s ease;
   text-decoration: none;
   display: inline-block;
-  font-size: 25pt;
+  font-size: 20pt;
   padding: 14px 16px;
 }
 
@@ -204,14 +168,15 @@ h1 {
   z-index: 1;
   transform: scale(1.5, 1.5);
   box-shadow: 5px 5px 10px #888888;
+  cursor: pointer;
 }
-.content:active
 
 .gallery-image{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
@@ -233,7 +198,7 @@ h1 {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
