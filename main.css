@@ -69,7 +69,7 @@ nav{
   overflow: hidden;
   background-color: #777777;
   border-radius: 25px;
-  max-height: 80px;
+  max-height: 100px;
   height: auto;
 }
 
@@ -98,7 +98,22 @@ nav a:not(.icon):hover {
   border-radius: 10px 10px 10px 10px;;
 }
 
+@media screen and (max-width: 1000px) {
+  nav a:not(:first-child) {
+    display:none;
+    background-color: green;
+  }
+}
 /*Gallery---------------------------------------------------------------------*/
+
+.logo{
+  display: flex;
+  margin: auto;
+  background-color: white;
+  object-fit: contain;
+  border-radius: 25px 25px 0 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -115,6 +130,7 @@ h1 {
 }
 
 .row {
+  position: inherit;
   margin: 8px -16px;
 }
 
@@ -139,12 +155,20 @@ h1 {
 
 /* Content */
 .content {
-  display: flex;
-  align-items: center;
-  background-color: white;
+  display: block;
+  background-color: #cccccc;
   padding: 10px;
   border-radius: 25px;
+  transition-duration: .5s;
+  transition-delay: .1s;
 }
+
+.content:hover{
+  position: relative;
+  z-index: 2;
+  transform: scale(1.5, 1.5);
+}
+.content:active
 
 .gallery-image{
   width: 100%;
@@ -156,9 +180,6 @@ h1 {
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
-  }
-  nav {
-
   }
 }
 
