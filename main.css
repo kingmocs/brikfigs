@@ -1,6 +1,6 @@
 html{
   /*background-color: #FCFFFF;*/
-  background-color: white;
+  background-color: #84D2F4;
 }
 
 /*header{
@@ -12,18 +12,7 @@ html{
   padding-left: 20px;
   padding-top: 5px;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-  min-width: 100px;
-  /*max-width: 1000px;*/
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+
 
 li {
   float: left;
@@ -60,13 +49,13 @@ body{
  padding: 10px 12px;
 }
 
-a {
+/*a {
  color: #35838A;
  text-decoration: none;
  display: inline-block;
  font-size: 25pt;
  padding: 14px 16px;
-}
+}*/
 
 p{
   font-family: 'Nanum Gothic', sans-serif;
@@ -116,39 +105,40 @@ iframe{
   height: auto;
 }
 
-/* Navigation Bar -----------------------------------------------------------*/
-nav.navigation {
-  list-style-type: none;
-  margin: 10px;
-  padding: 10;
+/*Navigation Bar -----------------------------------------------------------*/
+nav{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
   overflow: hidden;
-  background-color: #666666;
-  min-width: 100px;
-  /*max-width: 1000px;*/
-  /*position: fixed;*/
-  top: 0;
-  width: 100%;
-  float:left;
+  background-color: #777777;
   border-radius: 25px;
-  max-height: auto;
-
+  max-height: 80px;
+  height: auto;
 }
 
-.logo {
-  padding-top: 0;
-  padding-left: 10px;
-  margin: 0;
-  float: left;
+nav a{
+  font-family: "DIN Alternate", sans-serif;
+  color: white;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25pt;
+  padding: 14px 16px;
+}
+
+nav img {
   object-fit: fill;
-  width: 50px;
-  height: auto;
+  max-height: 100px;
 }
 
 .active {
   background-color: #00a2e8;
+  border-radius: 10px 10px 10px 10px;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
+nav a:not(.icon):hover {
   background-color: #005e8a;
+  border-radius: 10px 10px 10px 10px;;
 }
