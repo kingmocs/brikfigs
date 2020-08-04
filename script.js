@@ -22,7 +22,7 @@ function getID(clicked_id){
 }
 
 function navIcon() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("mainnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
