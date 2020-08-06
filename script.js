@@ -1,4 +1,4 @@
-window.location.replace("coming-soon.html");
+//window.location.replace("coming-soon.html");
 
 function getID(clicked_id){
   // Get the modal
