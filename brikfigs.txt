@@ -5,6 +5,6 @@
   },
   {
     "name": "Clown",
-    "image": "images/clwon.png"
+    "image": "images/clown.png"
   }
 ]
