@@ -24,7 +24,7 @@
     "background-color": 0
   },
   {
-    "name": "Elf and Reindeer",
+    "name": "Elf & Reindeer",
     "image": "images/elf_and_reindeer.png",
     "part-count": 58,
     "background-color": 0
@@ -54,7 +54,7 @@
     "background-color": 0
   },
   {
-    "name": "Mad Scientist and Monster",
+    "name": "Mad Scientist & Monster",
     "image": "images/mand_scientist_and_monster.png",
     "part-count": 131,
     "background-color": 0
@@ -66,7 +66,7 @@
     "background-color": 0
   },
   {
-    "name": "Mr. and Mrs. Clause",
+    "name": "Mr. & Mrs. Clause",
     "image": "images/mr_and_mrs_clause.png",
     "part-count": 112,
     "background-color": 0

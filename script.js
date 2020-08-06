@@ -1,4 +1,4 @@
-window.location.replace("coming-soon.html");
+//window.location.replace("coming-soon.html");
 
 function getID(clicked_id){
   // Get the modal
@@ -32,7 +32,7 @@ function navIcon() {
 
 var min_time = 20000;
 var max_time = 60000;
-window.onload = function(){
+
 
 function getRandomTime(min_time, max_time) {
   return Math.floor(Math.random() * (max_time - min_time)) + min_time;
@@ -42,7 +42,6 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var bfData = JSON.parse(this.responseText);
-
     var bf_count = bfData.length;
     var gal_size = 12;
     var card_id = "card_";
@@ -59,5 +58,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", "brikfigs.txt", true);
 xmlhttp.send();
 
+window.onload = function(){
+document.getElementById("test-h1").innerHTML = bfData[0].name;
 
 }
