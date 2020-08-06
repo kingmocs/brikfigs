@@ -1,4 +1,9 @@
-window.location.replace("coming-soon.html");
+//window.location.replace("coming-soon.html");
+
+//Declare variabls
+min_time = 20000;
+max_time = 60000;
+
 
 function getID(clicked_id){
   // Get the modal
@@ -28,4 +33,8 @@ function navIcon() {
   } else {
     x.className = "topnav";
   }
+}
+
+function getRandomTime(min_time, max_time) {
+  return Math.floor(Math.random() * (max_time - min_time)) + min_time;
 }
