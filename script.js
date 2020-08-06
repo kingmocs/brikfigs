@@ -2,7 +2,7 @@
 
 //Declare variabls
 
-function getID(clicked_id){
+/*function getID(clicked_id){
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -30,9 +30,11 @@ function navIcon() {
   } else {
     x.className = "topnav";
   }
-}
+}*/
 
-var min_time = 20000;
+document.getElementById("image-test").src = "images/clown.png";
+
+/*var min_time = 20000;
 var max_time = 60000;
 function getRandomTime(min_time, max_time) {
   return Math.floor(Math.random() * (max_time - min_time)) + min_time;
@@ -47,5 +49,4 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "brikfigs.txt", true);
 xmlhttp.send();
-
-document.getElementById("img-02").src = "clown.png";
+*/
