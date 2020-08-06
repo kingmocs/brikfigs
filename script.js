@@ -1,8 +1,6 @@
-//window.location.replace("coming-soon.html");
+window.location.replace("coming-soon.html");
 
-//Declare variabls
-
-/*function getID(clicked_id){
+function getID(clicked_id){
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -30,12 +28,12 @@ function navIcon() {
   } else {
     x.className = "topnav";
   }
-}*/
+}
 
-document.getElementById("image-test").src = "images/clown.png";
-
-/*var min_time = 20000;
+var min_time = 20000;
 var max_time = 60000;
+window.onload = function(){
+
 function getRandomTime(min_time, max_time) {
   return Math.floor(Math.random() * (max_time - min_time)) + min_time;
 }
@@ -43,10 +41,23 @@ function getRandomTime(min_time, max_time) {
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    var myArr = JSON.parse(this.responseText);
-    document.getElementById("test").innerHTML = myArr[0].name;
+    var bfData = JSON.parse(this.responseText);
+
+    var bf_count = bfData.length;
+    var gal_size = 12;
+    var card_id = "card_";
+    var card = 0;
+    for (i = 0; i < gal_size; i++) {
+      card =  Math.floor(Math.random() * (bf_count - 1));
+      card_id = card_id.concat(i);
+      document.getElementById(card_id).firstElementChild.src = bfData[card].image;
+      document.getElementById(card_id).firstElementChild.alt = bfData[card].name;
+      card_id = "card_";
+    }
   }
-};
+}
 xmlhttp.open("GET", "brikfigs.txt", true);
 xmlhttp.send();
-*/
+
+
+}
