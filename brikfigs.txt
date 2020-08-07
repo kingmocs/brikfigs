@@ -55,7 +55,7 @@
   },
   {
     "name": "Mad Scientist & Monster",
-    "image": "images/mand_scientist_and_monster.png",
+    "image": "images/mad_scientist_and_monster.png",
     "part-count": 131,
     "background-color": 0
   },

@@ -1,4 +1,4 @@
-//window.location.replace("coming-soon.html");
+window.location.replace("coming-soon.html");
 
 function getID(clicked_id){
   // Get the modal
@@ -34,14 +34,50 @@ var min_time = 20000;
 var max_time = 60000;
 
 
+window.onload = function(){
+loadDoc("brikfigs.txt", populateGallery);
+}
+
 function getRandomTime(min_time, max_time) {
   return Math.floor(Math.random() * (max_time - min_time)) + min_time;
 }
 
+function loadDoc(url, cFunction) {
+  var xhttp;
+  var data = 10;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      cFunction(this);
+    }
+  }
+  xhttp.open("GET", url, true);
+  xhttp.send();
+  console.log(data);
+  return data;
+}
+
+function populateGallery(xhttp){
+  var bfData = JSON.parse(xhttp.responseText);
+  bf_count = bfData.length;
+  var gal_size = 9;
+  var card_id = "card_";
+  var card;
+  for (i = 0; i < gal_size; i++) {
+    card =  Math.floor(Math.random() * (bf_count - 1));
+    card_id = card_id.concat(i);
+    document.getElementById(card_id).firstElementChild.src = bfData[card].image;
+    document.getElementById(card_id).firstElementChild.alt = bfData[card].name;
+    card_id = "card_";
+  }
+}
+/*
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var bfData = JSON.parse(this.responseText);
+    //return bfData;
+    //var bfData = xmlhttp.onreadystatechange;
     var bf_count = bfData.length;
     var gal_size = 12;
     var card_id = "card_";
@@ -57,8 +93,4 @@ xmlhttp.onreadystatechange = function() {
 }
 xmlhttp.open("GET", "brikfigs.txt", true);
 xmlhttp.send();
-
-window.onload = function(){
-document.getElementById("test-h1").innerHTML = bfData[0].name;
-
-}
+*/
