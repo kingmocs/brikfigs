@@ -30,21 +30,12 @@ function navIcon() {
   }
 }
 
-var min_time = 20000;
-var max_time = 60000;
-
-
 window.onload = function(){
 loadDoc("brikfigs.txt", populateGallery);
 }
 
-function getRandomTime(min_time, max_time) {
-  return Math.floor(Math.random() * (max_time - min_time)) + min_time;
-}
-
 function loadDoc(url, cFunction) {
   var xhttp;
-  var data = 10;
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -53,44 +44,65 @@ function loadDoc(url, cFunction) {
   }
   xhttp.open("GET", url, true);
   xhttp.send();
-  console.log(data);
-  return data;
 }
 
 function populateGallery(xhttp){
-  var bfData = JSON.parse(xhttp.responseText);
-  bf_count = bfData.length;
+  let bfData = JSON.parse(xhttp.responseText);
+  let bf_count = bfData.length;
+  let min_time = 1000;
+  let max_time = 20000;
   var gal_size = 9;
-  var card_id = "card_";
-  var card;
+  let card_id = "card_";
+  let card = Array(gal_size);
+  var card_delay;
   for (i = 0; i < gal_size; i++) {
-    card =  Math.floor(Math.random() * (bf_count - 1));
     card_id = card_id.concat(i);
-    document.getElementById(card_id).firstElementChild.src = bfData[card].image;
-    document.getElementById(card_id).firstElementChild.alt = bfData[card].name;
+    do{
+      x =  Math.floor(Math.random() * (bf_count));
+    } while (card.includes(x) === true);
+    card[i] = x;
+    document.getElementById(card_id).firstElementChild.alt = bfData[card[i]].name;
+    document.getElementById(card_id).firstElementChild.src = bfData[card[i]].image;
+    document.getElementById(card_id).style.backgroundColor = bfData[card[i]].background;
+    let card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
+    window.setTimeout(changeCard, card_delay, bf_count, bfData, card_id, card, i, min_time, max_time);
     card_id = "card_";
   }
 }
-/*
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var bfData = JSON.parse(this.responseText);
-    //return bfData;
-    //var bfData = xmlhttp.onreadystatechange;
-    var bf_count = bfData.length;
-    var gal_size = 12;
-    var card_id = "card_";
-    var card = 0;
-    for (i = 0; i < gal_size; i++) {
-      card =  Math.floor(Math.random() * (bf_count - 1));
-      card_id = card_id.concat(i);
-      document.getElementById(card_id).firstElementChild.src = bfData[card].image;
-      document.getElementById(card_id).firstElementChild.alt = bfData[card].name;
-      card_id = "card_";
-    }
-  }
+
+function changeCard(bf_count, bfData, card_id, card, i, min_time, max_time){
+  do{
+    x =  Math.floor(Math.random() * (bf_count));
+  } while (card.includes(x) === true);
+  card[i] = x;
+  fadeOutIn(card_id, bfData, card, i);
+  let card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
+  window.setTimeout(changeCard, card_delay, bf_count, bfData, card_id, card, i, min_time, max_time);
 }
-xmlhttp.open("GET", "brikfigs.txt", true);
-xmlhttp.send();
-*/
+
+function fadeOutIn(card_id, bfData, card, i){
+  let opacity = 1;
+  var timer = setInterval(function(){
+    if(opacity < 0.1){
+      clearInterval(timer);
+      document.getElementById(card_id).firstElementChild.alt = bfData[card[i]].name;
+      document.getElementById(card_id).firstElementChild.src = bfData[card[i]].image;
+      document.getElementById(card_id).style.backgroundColor = bfData[card[i]].background;
+      fadeIn(card_id, opacity);
+    }
+    document.getElementById(card_id).firstElementChild.style.opacity = opacity;
+    document.getElementById(card_id).style.opacity = opacity;
+    opacity -= 0.1;
+  }, 50);
+}
+
+function fadeIn(card_id, opacity){
+  var timer = setInterval(function () {
+    if (opacity >= 1){
+      clearInterval(timer);
+    }
+    document.getElementById(card_id).firstElementChild.style.opacity = opacity;
+    document.getElementById(card_id).style.opacity = opacity;
+    opacity += 0.1;
+  }, 50);
+}

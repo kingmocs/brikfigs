@@ -2,139 +2,139 @@
   {
     "name": "Clown",
     "image": "images/clown.png",
-    "part-count": 45,
-    "background-color": 0
+    "pieces": 45,
+    "background": "#e8dd45"
   },
   {
     "name": "Cupid",
     "image": "images/cupid.png",
-    "part-count": 46,
-    "background-color": 0
+    "pieces": 46,
+    "background": "#ed6fd4"
   },
   {
     "name": "Dirt Bike Rider",
     "image": "images/dirt_bike_rider.png",
-    "part-count": 69,
-    "background-color": 0
+    "pieces": 69,
+    "background": "#75e051"
   },
   {
     "name": "Dragon Dance",
     "image": "images/dragon_dance.png",
-    "part-count": 77,
-    "background-color": 0
+    "pieces": 77,
+    "background": "#e8ac46"
   },
   {
     "name": "Elf & Reindeer",
     "image": "images/elf_and_reindeer.png",
-    "part-count": 58,
-    "background-color": 0
+    "pieces": 58,
+    "background": "#ff6e6e"
   },
   {
     "name": "Football Player",
     "image": "images/football_player.png",
-    "part-count": 36,
-    "background-color": 0
+    "pieces": 36,
+    "background": "#30962f"
   },
   {
     "name": "Ghost",
     "image": "images/ghost.png",
-    "part-count": 32,
-    "background-color": 0
+    "pieces": 32,
+    "background": "#7959b5"
   },
   {
     "name": "King",
     "image": "images/king.png",
-    "part-count": 38,
-    "background-color": 0
+    "pieces": 38,
+    "background": "#2a66d4"
   },
   {
     "name": "Leprechaun",
     "image": "images/leprechaun.png",
-    "part-count": 40,
-    "background-color": 0
+    "pieces": 40,
+    "background": "#5dbf58"
   },
   {
     "name": "Mad Scientist & Monster",
     "image": "images/mad_scientist_and_monster.png",
-    "part-count": 131,
-    "background-color": 0
+    "pieces": 131,
+    "background": "#468249"
   },
   {
     "name": "Mariachi Band",
     "image": "images/mariachi_band.png",
-    "part-count": 176,
-    "background-color": 0
+    "pieces": 176,
+    "background": "#e38644"
   },
   {
     "name": "Mr. & Mrs. Clause",
     "image": "images/mr_and_mrs_clause.png",
-    "part-count": 112,
-    "background-color": 0
+    "pieces": 112,
+    "background": "#21750e"
   },
   {
     "name": "Native Americans",
     "image": "images/native_americans.png",
-    "part-count": 92,
-    "background-color": 0
+    "pieces": 92,
+    "background": "#0f4f12"
   },
   {
     "name": "Pilgrims",
     "image": "images/Pilgrims.png",
-    "part-count": 91,
-    "background-color": 0
+    "pieces": 91,
+    "background": "#d6691c"
   },
   {
     "name": "Pirate",
     "image": "images/pirate.png",
-    "part-count": 44,
-    "background-color": 0
+    "pieces": 44,
+    "background": "#2acbe6"
   },
   {
     "name": "Polar Bear",
     "image": "images/polar_bear.png",
-    "part-count": 42,
-    "background-color": 0
+    "pieces": 42,
+    "background": "#60aebf"
   },
   {
     "name": "Queen",
     "image": "images/queen.png",
-    "part-count": 39,
-    "background-color": 0
+    "pieces": 39,
+    "background": "#e84669"
   },
   {
     "name": "Scarecrow",
     "image": "images/scarecrow.png",
-    "part-count": 31,
-    "background-color": 0
+    "pieces": 31,
+    "background": "#e0c451"
   },
   {
     "name": "Skeleton",
     "image": "images/skeleton.png",
-    "part-count": 27,
-    "background-color": 0
+    "pieces": 27,
+    "background": "#9852e3"
   },
   {
     "name": "Snowboarder",
     "image": "images/snowboarder.png",
-    "part-count": 43,
-    "background-color": 0
+    "pieces": 43,
+    "background": "#c8f3f7"
   },
   {
     "name": "Uncle Sam",
     "image": "images/uncle_sam.png",
-    "part-count": 36,
-    "background-color": 0
+    "pieces": 36,
+    "background": "#d1bb90"
   },
   {
     "name": "Victorians",
     "image": "images/victorians.png",
-    "part-count": 77,
-    "background-color": 0
+    "pieces": 77,
+    "background": "#43916d"
   },
   {
     "name": "Wizard",
     "image": "images/wizard.png",
-    "part-count": 40,
-    "background-color": 0
+    "pieces": 40,
+    "background": "#485094"
   }
 ]

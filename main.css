@@ -161,8 +161,8 @@ h1 {
 .content:hover{
   position: relative;
   z-index: 1;
-  transform: scale(1.5, 1.5);
-  box-shadow: 5px 5px 10px #888888;
+  transform: scale(1.33, 1.33);
+  box-shadow: 5px 5px 10px #444444;
   cursor: pointer;
 }
 
