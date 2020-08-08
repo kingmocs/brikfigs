@@ -104,27 +104,24 @@ nav a:hover {
   }
 }
 
-/*Gallery---------------------------------------------------------------------*/
-.logo{
+/*Brikfigs Home Section-------------------------------------------------------*/
+.BFLogo{
   display: flex;
-  margin: auto;
-  max-width: 1150px;
+  margin: 2%;
   background-color: white;
   object-fit: contain;
   border-radius: 25px 25px 25px 25px;
 }
 
-/* Center website */
 .gallery {
   margin: 2%;
   display: grid;
-  grid-gap: .75%;
+  grid-gap: 1%;
   justify-content: space-evenly;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Content */
 .gallery div{
   display: block;
   background-color: #cccccc;
@@ -144,15 +141,14 @@ nav a:hover {
 
 /*BrikFigs Motion Secion Home Page--------------------------------------------*/
 
-.motion {
+.BFMotionHome {
   float: left;
   padding: 2%;
 }
 
-.motionlogo{}
+.BFMotionlogo{}
 
 /*Modal images----------------------------------------------------------------*/
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
