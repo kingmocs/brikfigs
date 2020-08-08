@@ -79,7 +79,7 @@
   },
   {
     "name": "Pilgrims",
-    "image": "images/Pilgrims.png",
+    "image": "images/pilgrims.png",
     "pieces": 91,
     "background": "#d6691c"
   },
