@@ -22,13 +22,14 @@ function getID(clicked_id){
 }
 
 function navIcon() {
-  var x = document.getElementById("mainnav");
+  var x = document.getElementById("navbar");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
   }
 }
+
 
 window.onload = function(){
 loadDoc("brikfigs.txt", populateGallery);
