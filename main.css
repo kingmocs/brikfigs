@@ -7,6 +7,10 @@ body{
   text-align: left;
   /*font-family: 'Poiret One', cursive;*/
   font-family: 'Lato', sans-serif;
+  background-color: #84D2F4;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 25px;
 }
 
 img {
@@ -23,6 +27,10 @@ iframe{
   max-width: 75%;
   margin: 0;
   padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /*Navigation Bar -------------------------------------------------------------*/
@@ -100,58 +108,24 @@ nav a:hover {
 .logo{
   display: flex;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1150px;
   background-color: white;
   object-fit: contain;
   border-radius: 25px 25px 25px 25px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Center website */
 .gallery {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2%;
-  background-color: #84D2F4;
-  border-radius: 25px;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  display: flex;
-  position: inherit;
-  /*margin: 8px -16px;*/
-}
-
-/* Add padding BETWEEN each column (if you want) */
-/*.row,
-.row > .column {
-  padding: 8px;
-} */
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  margin: .75%;
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+  margin: 2%;
+  display: grid;
+  grid-gap: .75%;
+  justify-content: space-evenly;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Content */
-.content {
+.gallery div{
   display: block;
   background-color: #cccccc;
   padding: 10px;
@@ -160,7 +134,7 @@ h1 {
   transition-duration: .5s;
 }
 
-.content:hover{
+.gallery div:hover{
   position: relative;
   z-index: 1;
   transform: scale(1.33, 1.33);
@@ -168,29 +142,15 @@ h1 {
   cursor: pointer;
 }
 
-.gallery-image{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+/*BrikFigs Motion Secion Home Page--------------------------------------------*/
+
+.motion {
+  float: left;
+  padding: 2%;
 }
 
+.motionlogo{}
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-/*
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}*/
-
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/*
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}*/
 /*Modal images----------------------------------------------------------------*/
 
 /* The Modal (background) */
