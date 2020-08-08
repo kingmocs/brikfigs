@@ -1,4 +1,4 @@
-window.location.replace("coming-soon.html");
+//window.location.replace("coming-soon.html");
 
 function getID(clicked_id){
   // Get the modal
@@ -49,8 +49,8 @@ function loadDoc(url, cFunction) {
 function populateGallery(xhttp){
   let bfData = JSON.parse(xhttp.responseText);
   let bf_count = bfData.length;
-  let min_time = 1000;
-  let max_time = 20000;
+  let min_time = 20000;
+  let max_time = 40000;
   var gal_size = 9;
   let card_id = "card_";
   let card = Array(gal_size);
