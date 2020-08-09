@@ -75,13 +75,16 @@ nav a.active {
   display: none;
 }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 900px) {
   .topnav :not(:first-child){
     display: none;
   }
   .topnav a.menu {
     float: right;
     display:block;
+    width: auto;
+  }
+  .topnav :first-child{
     width: auto;
   }
   .topnav.responsive {
@@ -97,7 +100,6 @@ nav a.active {
   .topnav.responsive a{
     float: none;
     display: block;
-    white-space: nowrap;
     text-align: left;
     width: auto;
   }
