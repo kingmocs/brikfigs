@@ -22,6 +22,19 @@ img {
   box-sizing: border-box;
 }
 
+@media (hover: hover) {
+  nav a:hover {
+    background-color: #005e8a;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .gallery div:hover{
+    position: relative;
+    z-index: 1;
+    transform: scale(1.33, 1.33);
+    box-shadow: 5px 5px 10px #444444;
+    cursor: pointer;
+  }
+}
 
 /*Navigation Bar -------------------------------------------------------------*/
 
@@ -62,10 +75,7 @@ nav a.active {
   display: none;
 }
 
-nav a:hover {
-  background-color: #005e8a;
-  border-radius: 10px 10px 10px 10px;
-}
+
 
 @media screen and (max-width: 1000px) {
   .topnav :not(:first-child){
@@ -124,13 +134,7 @@ nav a:hover {
   transition-duration: .5s;
 }
 
-.gallery div:hover{
-  position: relative;
-  z-index: 1;
-  transform: scale(1.33, 1.33);
-  box-shadow: 5px 5px 10px #444444;
-  cursor: pointer;
-}
+
 
 /*BrikFigs Motion Secion Home Page--------------------------------------------*/
 

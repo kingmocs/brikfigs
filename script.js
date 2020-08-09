@@ -108,6 +108,7 @@ function fadeIn(card_id, opacity){
   }, 50);
 }
 
+/*
 function watchForHover() {
   // lastTouchTime is used for ignoring emulated mousemove events
   let lastTouchTime = 0
@@ -133,3 +134,4 @@ function watchForHover() {
 }
 
 watchForHover()
+*/
