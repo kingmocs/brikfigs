@@ -22,11 +22,6 @@ img {
   box-sizing: border-box;
 }
 
-a:hover { color: blue; }
-
-@media (hover: none) {
-  a:hover { color: inherit; }
-}
 
 /*Navigation Bar -------------------------------------------------------------*/
 
