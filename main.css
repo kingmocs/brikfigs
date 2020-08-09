@@ -51,19 +51,19 @@ nav {
   overflow: hidden;
   background-color: #777777;
   border-radius: 25px;
-  object-position: center;
 }
 
 nav a{
+  display: block;
   width: 20%;
   padding: 12px;
   float: left;
   text-align: center;
-  font-family: "DIN Alternate", sans-serif;
   color: white;
-  transition: all 0.2s ease;
   text-decoration: none;
   font-size: 20pt;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
 nav a.active {
@@ -75,32 +75,31 @@ nav a.active {
   display: none;
 }
 
-
-
-@media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
   .topnav :not(:first-child){
     display: none;
   }
-  .topnav .menu {
+  .topnav a.menu {
     float: right;
-    display: block;
+    display:block;
+    width: auto;
   }
-}
-  @media screen and (max-width: 1000px) {
   .topnav.responsive {
-    /*position: fixed;*/
-    right: 0;
-    left:0;
+    position: relative;
   }
   .topnav.responsive .menu {
     position: absolute;
+    text-align: right;
     right: 0;
     top: 0;
+    width: auto;
   }
   .topnav.responsive a{
     float: none;
     display: block;
+    white-space: nowrap;
     text-align: left;
+    width: auto;
   }
 }
 
