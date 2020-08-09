@@ -1,139 +1,139 @@
 [
   {
     "name": "Clown",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/clown.png",
+    "image": "images/clown.png",
     "pieces": 45,
     "background": "#e8dd45"
   },
   {
     "name": "Cupid",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/cupid.png",
+    "image": "images/cupid.png",
     "pieces": 46,
     "background": "#ed6fd4"
   },
   {
     "name": "Dirt Bike Rider",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/dirt_bike_rider.png",
+    "image": "images/dirt_bike_rider.png",
     "pieces": 69,
     "background": "#75e051"
   },
   {
     "name": "Dragon Dance",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/dragon_dance.png",
+    "image": "images/dragon_dance.png",
     "pieces": 77,
     "background": "#e8ac46"
   },
   {
     "name": "Elf & Reindeer",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/elf_and_reindeer.png",
+    "image": "images/elf_and_reindeer.png",
     "pieces": 58,
     "background": "#ff6e6e"
   },
   {
     "name": "Football Player",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/football_player.png",
+    "image": "images/football_player.png",
     "pieces": 36,
     "background": "#30962f"
   },
   {
     "name": "Ghost",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/ghost.png",
+    "image": "images/ghost.png",
     "pieces": 32,
     "background": "#7959b5"
   },
   {
     "name": "King",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/king.png",
+    "image": "images/king.png",
     "pieces": 38,
     "background": "#2a66d4"
   },
   {
     "name": "Leprechaun",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/leprechaun.png",
+    "image": "images/leprechaun.png",
     "pieces": 40,
     "background": "#5dbf58"
   },
   {
     "name": "Mad Scientist & Monster",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/mad_scientist_and_monster.png",
+    "image": "images/mad_scientist_and_monster.png",
     "pieces": 131,
     "background": "#468249"
   },
   {
     "name": "Mariachi Band",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/mariachi_band.png",
+    "image": "images/mariachi_band.png",
     "pieces": 176,
     "background": "#e38644"
   },
   {
     "name": "Mr. & Mrs. Clause",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/mr_and_mrs_clause.png",
+    "image": "images/mr_and_mrs_clause.png",
     "pieces": 112,
     "background": "#21750e"
   },
   {
     "name": "Native Americans",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/native_americans.png",
+    "image": "images/native_americans.png",
     "pieces": 92,
     "background": "#0f4f12"
   },
   {
     "name": "Pilgrims",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/pilgrims.png",
+    "image": "images/pilgrims.png",
     "pieces": 91,
     "background": "#d6691c"
   },
   {
     "name": "Pirate",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/pirate.png",
+    "image": "images/pirate.png",
     "pieces": 44,
     "background": "#2acbe6"
   },
   {
     "name": "Polar Bear",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/polar_bear.png",
+    "image": "images/polar_bear.png",
     "pieces": 42,
     "background": "#60aebf"
   },
   {
     "name": "Queen",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/queen.png",
+    "image": "images/queen.png",
     "pieces": 39,
     "background": "#e84669"
   },
   {
     "name": "Scarecrow",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/scarecrow.png",
+    "image": "images/scarecrow.png",
     "pieces": 31,
     "background": "#e0c451"
   },
   {
     "name": "Skeleton",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/skeleton.png",
+    "image": "images/skeleton.png",
     "pieces": 27,
     "background": "#9852e3"
   },
   {
     "name": "Snowboarder",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/snowboarder.png",
+    "image": "images/snowboarder.png",
     "pieces": 43,
     "background": "#c8f3f7"
   },
   {
     "name": "Uncle Sam",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/uncle_sam.png",
+    "image": "images/uncle_sam.png",
     "pieces": 36,
     "background": "#d1bb90"
   },
   {
     "name": "Victorians",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/victorians.png",
+    "image": "images/victorians.png",
     "pieces": 77,
     "background": "#43916d"
   },
   {
     "name": "Wizard",
-    "image": "https://github.com/kingmocs/brikfigs/blob/master/images/wizard.png",
+    "image": "images/wizard.png",
     "pieces": 40,
     "background": "#485094"
   }
