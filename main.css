@@ -113,11 +113,10 @@ nav a.active {
 
 
 /*Brikfigs Home Section-------------------------------------------------------*/
-
-
-.BFLogo{
+.BFLogo a{
   display: flex;
   margin: 2%;
+  padding: 20%;
   background-color: white;
   object-fit: contain;
   border-radius: 25px 25px 25px 25px;
