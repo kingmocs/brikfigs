@@ -9,6 +9,7 @@ body{
   background-color: #84D2F4;
   max-width: 1200px;
   margin: auto;
+    -webkit-border-radius: 40px;
   border-radius: 40px;
   padding-top: 2px;
   transition-property: border-radius;
@@ -17,6 +18,7 @@ body{
 
 @media screen and (max-width: 1200px){
   body{
+    -webkit-border-radius: 0px;
     border-radius: 0px;
   }
 }
@@ -33,7 +35,8 @@ img {
 @media (hover: hover) {
   nav a:hover {
     background-color: #005e8a;
-    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
   .gallery div:hover{
     position: relative;
@@ -57,6 +60,7 @@ nav {
   margin: 2%;
   overflow: hidden;
   background-color: #777777;
+  -webkit-border-radius: 25px;
   border-radius: 25px;
 }
 
@@ -75,7 +79,8 @@ nav a{
 
 nav a.active {
   background-color: #00a2e8;
-  border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
  .topnav .menu{
@@ -107,6 +112,7 @@ nav a.active {
   .topnav.responsive a{
     float: none;
     display: block;
+    white-space: nowrap;
     text-align: left;
     width: auto;
   }
@@ -119,7 +125,8 @@ nav a.active {
   display: flex;
   background-color: #e0f4fc;
   object-fit: fill;
-  border-radius: 25px 25px 25px 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
 }
 .BFLogo img{
   max-width: 400px;
@@ -138,6 +145,7 @@ nav a.active {
   display: block;
   background-color: #cccccc;
   padding: 10px;
+  -webkit-border-radius: 25px;
   border-radius: 25px;
   transition-timing-function: ease;
   transition-duration: .5s;
