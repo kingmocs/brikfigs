@@ -5,7 +5,6 @@ html{
 }
 
 body{
-  text-align: left;
   background-color: #84D2F4;
   max-width: 1200px;
   margin: auto;
@@ -58,10 +57,10 @@ header{
   top: 0;
   z-index: 2;
   max-width: 1200px;
+  margin: 2%;
 }
 
 nav {
-  margin: 2%;
   overflow: hidden;
   background-color: #777777;
   -webkit-border-radius: 25px;
