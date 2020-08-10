@@ -3,18 +3,18 @@
     "name": "Rotate",
     "image": "images/rotate.png",
     "pieces": 54,
-    "background": "#FFFFFF"
+    "background": "#D13232"
   },
   {
     "name": "Sway",
     "image": "images/sway.png",
     "pieces": 72,
-    "background": "#FFFFFF"
+    "background": "#E0D051"
   },
   {
     "name": "Wave",
     "image": "images/wave.png",
     "pieces": 96,
-    "background": "#FFFFFF"
+    "background": "#327AD1"
   }
 ]

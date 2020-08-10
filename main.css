@@ -11,6 +11,7 @@ body{
     -webkit-border-radius: 40px;
   border-radius: 40px;
   padding-top: 2px;
+  padding-bottom: 2px;
   -webkit-transition-property: -webkit-border-radius;
   transition-property: border-radius;
   -webkit-transition-duration: .2s;
@@ -46,6 +47,11 @@ img {
     -webkit-box-shadow: 5px 5px 10px #444444;
     box-shadow: 5px 5px 10px #444444;
     cursor: pointer;
+  }
+  .BFMotionHome div:not(.BFMotionLogo):hover{
+    cursor: pointer;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -126,6 +132,7 @@ nav a.active {
 /*Brikfigs Home Section-------------------------------------------------------*/
 .BFHome{
   margin: 2%;
+  margin-bottom: 4%
 }
 
 .BFLogo {
@@ -153,7 +160,6 @@ nav a.active {
 
 .gallery div{
   display: block;
-  background-color: #cccccc;
   padding: 10px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
@@ -167,22 +173,43 @@ nav a.active {
 
 /*BrikFigs Motion Secion Home Page--------------------------------------------*/
 .BFMotionHome {
-  margin: 2%
+  background-color: #e0f4fc;
+  border-radius: 25px;
+  display: grid;
+  grid-gap: 1%;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  margin: 2%;
 }
 
-.BFMotionLogo {
+.BFMotionHome div{
   display: block;
-  background-color: #e0f4fc;
+  padding: 10px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  margin: 2%;
 }
 
-.BFMotionLogo a {
-  display: block;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
 /*Modal images----------------------------------------------------------------*/
 /* The Modal (background) */
 .modal {

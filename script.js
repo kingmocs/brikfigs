@@ -25,7 +25,7 @@ function getID(clicked_id){
       if (evt.keyCode == 27) {
           modal.style.display = "none";
       }
-  };
+  }
 }
 
 function navIcon() {
@@ -39,6 +39,7 @@ function navIcon() {
 
 window.onload = function(){
 loadDoc("brikfigs.txt", populateGallery);
+loadDoc("brikfigs_motion.txt", populateMotion);
 }
 
 function loadDoc(url, cFunction) {
@@ -65,13 +66,13 @@ function populateGallery(xhttp){
   for (i = 0; i < gal_size; i++) {
     card_id = card_id.concat(i);
     do{
-      x =  Math.floor(Math.random() * (bf_count));
+    var  x =  Math.floor(Math.random() * (bf_count));
     } while (card.includes(x) === true);
     card[i] = x;
     document.getElementById(card_id).firstElementChild.alt = bfData[card[i]].name;
     document.getElementById(card_id).firstElementChild.src = bfData[card[i]].image;
     document.getElementById(card_id).style.backgroundColor = bfData[card[i]].background;
-    let card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
+    var card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
     window.setTimeout(changeCard, card_delay, bf_count, bfData, card_id, card, i, min_time, max_time);
     card_id = "card_";
   }
@@ -79,11 +80,11 @@ function populateGallery(xhttp){
 
 function changeCard(bf_count, bfData, card_id, card, i, min_time, max_time){
   do{
-    x =  Math.floor(Math.random() * (bf_count));
+  var  x =  Math.floor(Math.random() * (bf_count));
   } while (card.includes(x) === true);
   card[i] = x;
   fadeOutIn(card_id, bfData, card, i);
-  let card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
+  var card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
   window.setTimeout(changeCard, card_delay, bf_count, bfData, card_id, card, i, min_time, max_time);
 }
 
@@ -112,4 +113,35 @@ function fadeIn(card_id, opacity){
     document.getElementById(card_id).style.opacity = opacity;
     opacity += 0.1;
   }, 50);
+}
+
+function populateMotion(xhttp){
+  let bfMData = JSON.parse(xhttp.responseText);
+  let bfm_count = bfMData.length;
+  var card_delay = 20000;
+  var x =  Math.floor(Math.random() * (bfm_count));
+  document.getElementById("card_09").firstElementChild.alt = bfMData[x].name;
+  document.getElementById("card_09").firstElementChild.src = bfMData[x].image;
+  document.getElementById("card_09").style.backgroundColor = bfMData[x].background;
+  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, bfMData, x);
+}
+
+function changeMotion(card_delay, bfm_count, bfMData, i){
+  do{
+    v =  Math.floor(Math.random() * 3);
+  }while(v === i);
+  let opacity = 1;
+  var timer = setInterval(function(){
+    if(opacity < 0.1){
+      clearInterval(timer);
+      document.getElementById("card_09").firstElementChild.alt = bfMData[v].name;
+      document.getElementById("card_09").firstElementChild.src = bfMData[v].image;
+      document.getElementById("card_09").style.backgroundColor = bfMData[v].background;
+      fadeIn("card_09", opacity);
+    }
+    document.getElementById("card_09").firstElementChild.style.opacity = opacity;
+    document.getElementById("card_09").style.opacity = opacity;
+    opacity -= 0.1;
+  }, 50);
+  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, bfMData, v);
 }
