@@ -102,7 +102,7 @@ nav a.active {
   }
   .topnav {
     width: auto;
-    margin: auto;
+    padding: auto;
   }
   .topnav.responsive {
     position: relative;
