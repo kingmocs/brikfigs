@@ -14,9 +14,10 @@ body{
   transition-property: border-radius;
   transition-duration: .2s;
 }
+
 @media screen and (max-width: 1200px){
   body{
-  border-radius: 0px;
+    border-radius: 0px;
   }
 }
 
@@ -90,7 +91,7 @@ nav a.active {
     display:block;
     width: auto;
   }
-  .topnav :nth-child(1){
+  .topnav {
     width: auto;
   }
   .topnav.responsive {
