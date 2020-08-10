@@ -21,7 +21,7 @@ body{
 @media only screen and (max-width: 1200px){
   body{
     -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: none;
   }
 }
 
