@@ -1,5 +1,6 @@
 //window.location.replace("coming-soon.html");
 
+
 function getID(clicked_id){
   // Get the modal
   var modal = document.getElementById("myModal");
@@ -19,6 +20,12 @@ function getID(clicked_id){
   span.onclick = function() {
     modal.style.display = "none";
   }
+  document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if (evt.keyCode == 27) {
+          modal.style.display = "none";
+      }
+  };
 }
 
 function navIcon() {

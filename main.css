@@ -117,7 +117,6 @@ nav a.active {
   .topnav.responsive a{
     float: none;
     display: block;
-    white-space: nowrap;
     text-align: left;
     width: auto;
   }
@@ -125,20 +124,26 @@ nav a.active {
 
 
 /*Brikfigs Home Section-------------------------------------------------------*/
-.BFLogo a{
+.BFHome{
   margin: 2%;
-  display: flex;
-  background-color: #e0f4fc;
+}
 
+.BFLogo {
+  margin-bottom: 2%;
+  display: block;
+  background-color: #e0f4fc;
   -webkit-border-radius: 25px;
   border-radius: 25px;
 }
-.BFLogo img{
+
+.BFLogo a {
+  display: block;
   max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery {
-  margin: 2%;
   display: grid;
   grid-gap: 1%;
   justify-content: space-evenly;
@@ -161,14 +166,23 @@ nav a.active {
 
 
 /*BrikFigs Motion Secion Home Page--------------------------------------------*/
-
 .BFMotionHome {
-  float: left;
-  padding: 2%;
+  margin: 2%
 }
 
-.BFMotionlogo{}
+.BFMotionLogo {
+  display: block;
+  background-color: #e0f4fc;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
 
+.BFMotionLogo a {
+  display: block;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*Modal images----------------------------------------------------------------*/
 /* The Modal (background) */
 .modal {

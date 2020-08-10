@@ -15,7 +15,7 @@
     "name": "Dirt Bike Rider",
     "image": "images/dirt_bike_rider.png",
     "pieces": 69,
-    "background": "#75E051"
+    "background": "#328BA8"
   },
   {
     "name": "Dragon Dance",
@@ -129,7 +129,7 @@
     "name": "Victorians",
     "image": "images/victorians.png",
     "pieces": 77,
-    "background": "#43916D"
+    "background": "#BF3900"
   },
   {
     "name": "Wizard",

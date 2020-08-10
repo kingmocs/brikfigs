@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Rotate",
+    "image": "images/rotate.png",
+    "pieces": 54,
+    "background": "#FFFFFF"
+  },
+  {
+    "name": "Sway",
+    "image": "images/sway.png",
+    "pieces": 72,
+    "background": "#FFFFFF"
+  },
+  {
+    "name": "Wave",
+    "image": "images/wave.png",
+    "pieces": 96,
+    "background": "#FFFFFF"
+  }
+]
