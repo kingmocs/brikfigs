@@ -130,7 +130,7 @@ nav a.active {
   margin: 2%;
   display: flex;
   background-color: #e0f4fc;
-  object-fit: fill;
+
   -webkit-border-radius: 25px;
   border-radius: 25px;
 }
