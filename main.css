@@ -49,6 +49,7 @@ img {
     cursor: pointer;
   }
 }
+
 /*Navigation Bar -------------------------------------------------------------*/
 
 header{
@@ -102,6 +103,7 @@ nav a.active {
   }
   .topnav {
     width: auto;
+    margin: auto;
   }
   .topnav.responsive {
     position: relative;
