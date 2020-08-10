@@ -18,7 +18,7 @@ body{
   transition-duration: .2s;
 }
 
-@media screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px){
   body{
     -webkit-border-radius: 0px;
     border-radius: 0px;
