@@ -14,11 +14,11 @@ body{
   transition-property: border-radius;
   transition-duration: .2s;
 }
-/*@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px){
   body{
   border-radius: 0px;
   }
-}*/
+}
 
 img {
   margin: auto;
