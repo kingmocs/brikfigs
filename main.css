@@ -1,6 +1,6 @@
 html{
   /*background-color: #FCFFFF;*/
-  background-color: #ffffff;
+  background-color: #e0f4fc;
   font-family: "DIN Alternate", sans-serif;
 }
 
@@ -115,12 +115,14 @@ nav a.active {
 
 /*Brikfigs Home Section-------------------------------------------------------*/
 .BFLogo a{
-  display: flex;
   margin: 2%;
-  padding: 20%;
-  background-color: white;
-  object-fit: contain;
+  display: flex;
+  background-color: #e0f4fc;
+  object-fit: fill;
   border-radius: 25px 25px 25px 25px;
+}
+.BFLogo img{
+  max-width: 400px;
 }
 
 .gallery {
