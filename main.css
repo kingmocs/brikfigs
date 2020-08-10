@@ -18,7 +18,7 @@ body{
   transition-duration: .2s;
 }
 
-@media only screen and (max-width: 1200px){
+@media screen and (max-width: 1200px){
   body{
     -webkit-border-radius: 0px;
     border-radius: none;
@@ -242,7 +242,7 @@ nav a.active {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media screen and (max-width: 700px){
   .modal-content {
     width: 100%;
   }
