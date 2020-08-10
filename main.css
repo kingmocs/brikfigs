@@ -82,7 +82,7 @@ nav a.active {
 }
 
   @media screen and (max-width: 900px) {
-  .topnav :not(:first-child){
+  .topnav :not(:nth-child(1)){
     display: none;
   }
   .topnav a.menu {
@@ -90,7 +90,7 @@ nav a.active {
     display:block;
     width: auto;
   }
-  .topnav :nth-child(2){
+  .topnav :nth-child(1){
     width: auto;
   }
   .topnav.responsive {
