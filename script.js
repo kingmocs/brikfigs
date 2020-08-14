@@ -1,5 +1,5 @@
 //window.location.replace("coming-soon.html");
-
+var bf_data = [];
 
 function getID(clicked_id){
   // Get the modal
@@ -38,8 +38,10 @@ function navIcon() {
 }
 
 window.onload = function(){
+
 loadDoc("brikfigs.txt", populateGallery);
 loadDoc("brikfigs_motion.txt", populateMotion);
+setTimeout(function(){ console.log(bf_data); }, 3000);
 }
 
 function loadDoc(url, cFunction) {
@@ -56,7 +58,10 @@ function loadDoc(url, cFunction) {
 
 function populateGallery(xhttp){
   let bfData = JSON.parse(xhttp.responseText);
-  let bf_count = bfData.length;
+  let bf_count = JSON.parse(xhttp.responseText).length;
+  for(j = 0; j < bf_count; j++){
+    bf_data.push(JSON.parse(xhttp.responseText)[j]);
+  }
   let min_time = 20000;
   let max_time = 40000;
   var gal_size = 9;

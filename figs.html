@@ -8,6 +8,7 @@
   <meta name="Author" content="Alex King"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -15,19 +16,74 @@
 </head>
 
 <header>
-  <nav>
-
-      <a class="icon" href="index.html">
-          <img src="images/brikfigs_head.png" alt="logo">
-      </a>
-
+  <nav class="topnav" id="navbar">
     <a href="index.html">Home</a>
     <a class="active" href="figs.html">BrikFigs</a>
     <a href="U.html">BrikFigsU</a>
     <a href="motion.html">BrikFigs Motion</a>
     <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="menu" onclick="navIcon()">
+        <i class="fa fa-bars"></i>
+    </a>
   </nav>
 </header>
+
+<body>
+  <div class="BFHome">
+ <!-- Portfolio Gallery Grid -->
+    <div class="BFLogo">
+      <div class="dropdown">
+        <button class="dropbtn">Category</button>
+        <div class="dropdown-content">
+          <button onclick="filterFigs("all")">All</button>
+          <button onclick="filterFigs("classic")">Classic</button>
+          <button onclic="filterFigs("fantasy")">Fantasy</button>
+          <button onclic="filterFigs("historical")">Historical</button>
+          <button onclicf="filterFigs("seasonal")">Seasonal</button>
+          <button onclicf="filterFigs("sports")">Sports</button>
+        </div>
+        </div>
+      <a href="figs.html">
+        <img src="/images/brikfigslogo.png" alt="BrikFigs Logo">
+      </a>
+    </div>
+    <div class = gallery>
+        <div onclick="getID(this.id)" id="card_0">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_1">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_2">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_3">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_4">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_5">
+          <img class="gallery-image" src="images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_6">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_7">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+        <div onclick="getID(this.id)" id="card_8">
+          <img src="/images/brikfigslogo.png" alt="BrikFigs">
+        </div>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <h1 id="caption"></h1>
+    <input style="display:none;" type="text" onkeydown="escModal(evt)">
+  </div>
+</body>
 
 <h1>BrikFigs</h1>
 <footer>

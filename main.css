@@ -59,6 +59,85 @@ img {
   }
 }
 
+/*Modal images----------------------------------------------------------------*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
 /*Navigation Bar -------------------------------------------------------------*/
 
 header{
@@ -177,7 +256,7 @@ nav a.active {
 
 /*BrikFigs Motion Secion Home Page--------------------------------------------*/
 .BFMotionHome {
-  background-color: #e0f4fc;
+  background-color: #ffdbdb;
   border-radius: 25px;
   display: grid;
   grid-gap: 1%;
@@ -187,95 +266,86 @@ nav a.active {
 }
 
 .BFMotionHome div{
+  background-color: #ffdbdb;
   display: block;
-  padding: 10px;
+  padding: 2%;
+  margin: 4%;
   -webkit-border-radius: 25px;
   border-radius: 25px;
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
+}
+
+.BFMotionLogo img{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6%
+}
+
+/*BrikFigsU Section Home Page-------------------------------------------------*/
+
+.BFUHome {
+  background-color: #caf0c2;
+  border-radius: 25px;
+  display: grid;
+  grid-gap: 1%;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  margin: 2%;
+}
+
+.BFUHome div{
+  display: block;
+  padding: 2%;
   margin: 4%;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
 }
 
-
-
-/*Modal images----------------------------------------------------------------*/
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+.BFULogo img{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6%
 }
 
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+/*Figs Page-----------------*-------------------------------------------------*/
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
+.dropdown-content {
+  display: none;
   position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  cursor: pointer;
+  display: block;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
