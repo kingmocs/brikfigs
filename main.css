@@ -256,7 +256,7 @@ nav a.active {
 
 /*BrikFigs Motion Secion Home Page--------------------------------------------*/
 .BFMotionHome {
-  background-color: #ffdbdb;
+  background-color: #e0f4fc;
   border-radius: 25px;
   display: grid;
   grid-gap: 1%;
@@ -266,7 +266,6 @@ nav a.active {
 }
 
 .BFMotionHome div{
-  background-color: #ffdbdb;
   display: block;
   padding: 2%;
   margin: 4%;

@@ -1,5 +1,8 @@
 //window.location.replace("coming-soon.html");
 var bf_data = [];
+var bf_count;
+var bfm_data = [];
+var bfm_count;
 
 function getID(clicked_id){
   // Get the modal
@@ -42,6 +45,7 @@ window.onload = function(){
 loadDoc("brikfigs.txt", populateGallery);
 loadDoc("brikfigs_motion.txt", populateMotion);
 setTimeout(function(){ console.log(bf_data); }, 3000);
+filterFigs("all");
 }
 
 function loadDoc(url, cFunction) {
@@ -57,8 +61,7 @@ function loadDoc(url, cFunction) {
 }
 
 function populateGallery(xhttp){
-  let bfData = JSON.parse(xhttp.responseText);
-  let bf_count = JSON.parse(xhttp.responseText).length;
+  bf_count = JSON.parse(xhttp.responseText).length;
   for(j = 0; j < bf_count; j++){
     bf_data.push(JSON.parse(xhttp.responseText)[j]);
   }
@@ -74,33 +77,33 @@ function populateGallery(xhttp){
     var  x =  Math.floor(Math.random() * (bf_count));
     } while (card.includes(x) === true);
     card[i] = x;
-    document.getElementById(card_id).firstElementChild.alt = bfData[card[i]].name;
-    document.getElementById(card_id).firstElementChild.src = bfData[card[i]].image;
-    document.getElementById(card_id).style.backgroundColor = bfData[card[i]].background;
+    document.getElementById(card_id).firstElementChild.alt = bf_data[card[i]].name;
+    document.getElementById(card_id).firstElementChild.src = bf_data[card[i]].image;
+    document.getElementById(card_id).style.backgroundColor = bf_data[card[i]].background;
     var card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
-    window.setTimeout(changeCard, card_delay, bf_count, bfData, card_id, card, i, min_time, max_time);
+    window.setTimeout(changeCard, card_delay, card_id, card, i, min_time, max_time);
     card_id = "card_";
   }
 }
 
-function changeCard(bf_count, bfData, card_id, card, i, min_time, max_time){
+function changeCard(card_id, card, i, min_time, max_time){
   do{
   var  x =  Math.floor(Math.random() * (bf_count));
   } while (card.includes(x) === true);
   card[i] = x;
-  fadeOutIn(card_id, bfData, card, i);
+  fadeOutIn(card_id, card, i);
   var card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
-  window.setTimeout(changeCard, card_delay, bf_count, bfData, card_id, card, i, min_time, max_time);
+  window.setTimeout(changeCard, card_delay, bf_count, card_id, card, i, min_time, max_time);
 }
 
-function fadeOutIn(card_id, bfData, card, i){
+function fadeOutIn(card_id, card, i){
   let opacity = 1;
   var timer = setInterval(function(){
     if(opacity < 0.1){
       clearInterval(timer);
-      document.getElementById(card_id).firstElementChild.alt = bfData[card[i]].name;
-      document.getElementById(card_id).firstElementChild.src = bfData[card[i]].image;
-      document.getElementById(card_id).style.backgroundColor = bfData[card[i]].background;
+      document.getElementById(card_id).firstElementChild.alt = bf_data[card[i]].name;
+      document.getElementById(card_id).firstElementChild.src = bf_data[card[i]].image;
+      document.getElementById(card_id).style.backgroundColor = bf_data[card[i]].background;
       fadeIn(card_id, opacity);
     }
     document.getElementById(card_id).firstElementChild.style.opacity = opacity;
@@ -121,17 +124,19 @@ function fadeIn(card_id, opacity){
 }
 
 function populateMotion(xhttp){
-  let bfMData = JSON.parse(xhttp.responseText);
-  let bfm_count = bfMData.length;
+  bfm_count = JSON.parse(xhttp.responseText).length;
+  for(j = 0; j < bfm_count; j++){
+    bfm_data.push(JSON.parse(xhttp.responseText)[j]);
+  }
   var card_delay = 20000;
   var x =  Math.floor(Math.random() * (bfm_count));
-  document.getElementById("card_09").firstElementChild.alt = bfMData[x].name;
-  document.getElementById("card_09").firstElementChild.src = bfMData[x].image;
-  document.getElementById("card_09").style.backgroundColor = bfMData[x].background;
-  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, bfMData, x);
+  document.getElementById("card_09").firstElementChild.alt = bfm_data[x].name;
+  document.getElementById("card_09").firstElementChild.src = bfm_data[x].image;
+  document.getElementById("card_09").style.backgroundColor = bfm_data[x].background;
+  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, x);
 }
 
-function changeMotion(card_delay, bfm_count, bfMData, i){
+function changeMotion(card_delay, i){
   do{
     v =  Math.floor(Math.random() * 3);
   }while(v === i);
@@ -139,14 +144,27 @@ function changeMotion(card_delay, bfm_count, bfMData, i){
   var timer = setInterval(function(){
     if(opacity < 0.1){
       clearInterval(timer);
-      document.getElementById("card_09").firstElementChild.alt = bfMData[v].name;
-      document.getElementById("card_09").firstElementChild.src = bfMData[v].image;
-      document.getElementById("card_09").style.backgroundColor = bfMData[v].background;
+      document.getElementById("card_09").firstElementChild.alt = bfm_data[v].name;
+      document.getElementById("card_09").firstElementChild.src = bfm_data[v].image;
+      document.getElementById("card_09").style.backgroundColor = bfm_data[v].background;
       fadeIn("card_09", opacity);
     }
     document.getElementById("card_09").firstElementChild.style.opacity = opacity;
     document.getElementById("card_09").style.opacity = opacity;
     opacity -= 0.1;
   }, 50);
-  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, bfMData, v);
+  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, v);
+}
+
+function filterFigs(filter){
+  var x;
+  var bf_filtered = bf_data.tags.filter(filter);
+  console.log(bf_filtered);
+  for(i = 0; i < bf_count; i++){
+    if(bf_data[i] === true){
+      console.log("found");
+      x = document.createElement("div");
+      document.getElementsByClassName("FigList");
+    }
+  }
 }
