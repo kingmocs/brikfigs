@@ -2,7 +2,7 @@
 var bf_data = [];
 var bf_count;
 var bfm_data = [];
-var bfm_count;
+let bfm_count;
 
 function getID(clicked_id){
   // Get the modal
@@ -42,9 +42,8 @@ function navIcon() {
 
 window.onload = function(){
 
-loadDoc("brikfigs.txt", populateGallery);
-loadDoc("brikfigs_motion.txt", populateMotion);
-setTimeout(function(){ console.log(bf_data); }, 3000);
+loadDoc("brikfigs.txt", bfData);
+loadDoc("brikfigs_motion.txt", bfmData);
 filterFigs("all");
 }
 
@@ -60,11 +59,29 @@ function loadDoc(url, cFunction) {
   xhttp.send();
 }
 
-function populateGallery(xhttp){
+function bfData(xhttp){
   bf_count = JSON.parse(xhttp.responseText).length;
   for(j = 0; j < bf_count; j++){
     bf_data.push(JSON.parse(xhttp.responseText)[j]);
   }
+  console.log(bf_data);
+  if (window.location.href.match('index.html') != null) {
+    populateGallery();
+  }
+}
+
+function bfmData(xhttp){
+  bfm_count = JSON.parse(xhttp.responseText).length;
+  for(j = 0; j < bfm_count; j++){
+    bfm_data.push(JSON.parse(xhttp.responseText)[j]);
+  }
+  console.log(bfm_data);
+  if (window.location.href.match('index.html') != null) {
+    populateMotion();
+  }
+}
+
+function populateGallery(){
   let min_time = 20000;
   let max_time = 40000;
   var gal_size = 9;
@@ -124,10 +141,6 @@ function fadeIn(card_id, opacity){
 }
 
 function populateMotion(xhttp){
-  bfm_count = JSON.parse(xhttp.responseText).length;
-  for(j = 0; j < bfm_count; j++){
-    bfm_data.push(JSON.parse(xhttp.responseText)[j]);
-  }
   var card_delay = 20000;
   var x =  Math.floor(Math.random() * (bfm_count));
   document.getElementById("card_09").firstElementChild.alt = bfm_data[x].name;
@@ -153,16 +166,17 @@ function changeMotion(card_delay, i){
     document.getElementById("card_09").style.opacity = opacity;
     opacity -= 0.1;
   }, 50);
-  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, v);
+  window.setTimeout(changeMotion, card_delay, card_delay, v);
 }
 
 function filterFigs(filter){
   var x;
-  var bf_filtered = bf_data.tags.filter(filter);
-  console.log(bf_filtered);
+  //var bf_filtered = bf_data.tags.filter(filter);
+  //console.log(bf_filtered);
   for(i = 0; i < bf_count; i++){
-    if(bf_data[i] === true){
-      console.log("found");
+    console.log(bf_data[i])
+    if(bf_data[i].tags.search(filter) === true){
+
       x = document.createElement("div");
       document.getElementsByClassName("FigList");
     }
