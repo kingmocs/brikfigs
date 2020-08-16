@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -18,7 +19,7 @@
 <header>
   <nav class="topnav" id="navbar">
     <a href="index.html">Home</a>
-    <a class="active" href="figs.html">BrikFigs</a>
+    <a class="active" href="figs.html">Figs</a>
     <a href="motion.html">BrikFigs Motion</a>
     <a href="U.html">BrikFigsU</a>
     <a href="about.html">About</a>
@@ -31,25 +32,18 @@
 <body>
   <div class="BFHome">
  <!-- Portfolio Gallery Grid -->
-    <div class="BFLogo">
-      <div class="dropdown">
-        <button class="dropbtn">Category</button>
-        <div class="dropdown-content">
-          <button onclick="filterFigs('all')">All</button>
-          <button onclick="filterFigs('classic')">Classic</button>
-          <button onclick="filterFigs('fantasy')">Fantasy</button>
-          <button onclick="filterFigs('historical')">Historical</button>
-          <button onclick="filterFigs('seasonal')">Seasonal</button>
-          <button onclick="filterFigs('sports')">Sports</button>
-        </div>
-        </div>
-      <a href="figs.html">
-        <img src="/images/brikfigslogo.png" alt="BrikFigs Logo">
-      </a>
-    </div>
+    <ul class="FigsFilters">
+      <li><button onclick="filterFigs('all')">All</button></li>
+      <li><button onclick="filterFigs('classic')">Classic</button></li>
+      <li><button onclick="filterFigs('fantasy')">Fantasy</button></li>
+      <li><button onclick="filterFigs('historical')">Historical</button></li>
+      <li><button onclick="filterFigs('seasonal')">Seasonal</button></li>
+      <li><button onclick="filterFigs('sports')">Sports</button></li>
+    </ul>
     <div class="gallery">
     </div>
   </div>
+
   <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="img01">

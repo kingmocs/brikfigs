@@ -57,6 +57,11 @@ img {
     box-shadow: 5px 5px 10px #444444;
     cursor: pointer;
   }
+  .FigsFilters button:hover{
+    background-color: #005e8a;
+    /*-webkit-border-radius: 10px;
+    border-radius: 10px;*/
+  }
 }
 
 /*Modal images----------------------------------------------------------------*/
@@ -314,56 +319,33 @@ nav a.active {
 }
 
 /*Figs Page-----------------*-------------------------------------------------*/
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-.FigList {
-  display: grid;
-  grid-gap: 1%;
-  justify-content: space-evenly;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.FigList div{
-  display: block;
-  padding: 10px;
+ul.FigsFilters {
+  overflow: hidden;
+  background-color: #aaaaaa;
   -webkit-border-radius: 25px;
   border-radius: 25px;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
+  list-style-type: none;
+  float: center;
+}
+
+ul.FigsFilters li{
+  list-style: none;
+  display: inline;
+  padding: none;
+  float: left;
+}
+
+.FigsFilters button{
+background-color: #aaaaaa;
+width: 100%;
+margin: auto;
+border: none;
+outline: none;
+font-size: 20pt;
+text-align: center;
+color: white;
+text-decoration: none;
+white-space: nowrap;
+-webkit-transition: all 0.2s ease;
+transition: all 0.2s ease;
 }

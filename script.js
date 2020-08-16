@@ -111,7 +111,7 @@ function changeCard(card_id, card, i, min_time, max_time){
   card[i] = x;
   fadeOutIn(card_id, card, i);
   var card_delay = Math.floor(Math.random() * (max_time - min_time)) + min_time;
-  window.setTimeout(changeCard, card_delay, bf_count, card_id, card, i, min_time, max_time);
+  window.setTimeout(changeCard, card_delay, card_id, card, i, min_time, max_time);
 }
 
 function fadeOutIn(card_id, card, i){
@@ -182,6 +182,7 @@ function filterFigs(filter){
   for(i = 0; i < bf_count; i++){
     if(bf_data[i].tags.includes(filter) === true){
       //console.log(bf_data[i].name)
+      //
       y = document.createElement("DIV");
       y.style.backgroundColor = bf_data[i].background;
       y.id = "fig_" + i;
@@ -192,5 +193,32 @@ function filterFigs(filter){
       y.appendChild(z);
       x.appendChild(y);
     }
+    //else{
+    //  x.removeChild(x.childNodes[]);
+    //}
   }
+}
+
+function figFadeOut(x){
+  var opacity = 1;
+  var timer = setInterval(function(){
+    if(opacity < 0.1){
+      clearInterval(timer);
+      figFadeIn(x, opacity);
+    }
+    x.firstElementChild.style.opacity = opacity;
+    x.style.opacity = opacity;
+    opacity -= 0.1;
+  }, 50);
+}
+
+function figFadeIn(x, opacity){
+  var timer = setInterval(function () {
+    if (opacity >= 1){
+      clearInterval(timer);
+    }
+    x.firstElementChild.style.opacity = opacity;
+    x.style.opacity = opacity;
+    opacity += 0.1;
+  }, 50);
 }
