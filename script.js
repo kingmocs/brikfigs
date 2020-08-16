@@ -41,10 +41,8 @@ function navIcon() {
 }
 
 window.onload = function(){
-
 loadDoc("brikfigs.txt", bfData);
 loadDoc("brikfigs_motion.txt", bfmData);
-filterFigs("all");
 }
 
 function loadDoc(url, cFunction) {
@@ -64,9 +62,12 @@ function bfData(xhttp){
   for(j = 0; j < bf_count; j++){
     bf_data.push(JSON.parse(xhttp.responseText)[j]);
   }
-  console.log(bf_data);
+  //console.log(bf_data);
   if (window.location.href.match('index.html') != null) {
     populateGallery();
+  }
+  else if (window.location.href.match('figs.html') != null) {
+    filterFigs("all");
   }
 }
 
@@ -75,7 +76,7 @@ function bfmData(xhttp){
   for(j = 0; j < bfm_count; j++){
     bfm_data.push(JSON.parse(xhttp.responseText)[j]);
   }
-  console.log(bfm_data);
+  //console.log(bfm_data);
   if (window.location.href.match('index.html') != null) {
     populateMotion();
   }
@@ -170,15 +171,26 @@ function changeMotion(card_delay, i){
 }
 
 function filterFigs(filter){
-  var x;
-  //var bf_filtered = bf_data.tags.filter(filter);
-  //console.log(bf_filtered);
+  var x = document.querySelector(".gallery");
+  //console.log(x);
+  var y; //div
+  var z; //img
+  while (x.hasChildNodes() === true){
+    x.removeChild(x.firstChild);
+  }
+  //console.log(filter,"-------------------------------");
   for(i = 0; i < bf_count; i++){
-    console.log(bf_data[i])
-    if(bf_data[i].tags.search(filter) === true){
-
-      x = document.createElement("div");
-      document.getElementsByClassName("FigList");
+    if(bf_data[i].tags.includes(filter) === true){
+      //console.log(bf_data[i].name)
+      y = document.createElement("DIV");
+      y.style.backgroundColor = bf_data[i].background;
+      y.id = "fig_" + i;
+      y.addEventListener("click", function(){ getID(this.id); });
+      z = document.createElement("IMG");
+      z.alt = bf_data[i].name;
+      z.src = bf_data[i].image;
+      y.appendChild(z);
+      x.appendChild(y);
     }
   }
 }

@@ -348,3 +348,22 @@ nav a.active {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.FigList {
+  display: grid;
+  grid-gap: 1%;
+  justify-content: space-evenly;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.FigList div{
+  display: block;
+  padding: 10px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
