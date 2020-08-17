@@ -100,7 +100,7 @@
   {
     "name": "Pirate",
     "image": "images/pirate.png",
-    "pieces": 44,
+    "pieces": 45,
     "background": "#2ACBE6",
     "tags":["all", "historical", "fantasy"]
   },
