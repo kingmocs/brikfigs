@@ -62,12 +62,11 @@ function bfData(xhttp){
   for(j = 0; j < bf_count; j++){
     bf_data.push(JSON.parse(xhttp.responseText)[j]);
   }
-  //console.log(bf_data);
-  if (window.location.href.match('index.html') != null) {
-    populateGallery();
-  }
-  else if (window.location.href.match('figs.html') != null) {
+  if (window.location.href.match('figs.html') != null) {
     filterFigs("all");
+  }
+  else{
+    populateGallery();
   }
 }
 
