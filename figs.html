@@ -19,27 +19,30 @@
 <header>
   <nav class="topnav" id="navbar">
     <a href="index.html">Home</a>
-    <a class="active" href="figs.html">Figs</a>
+      <a href="javascript:void(0);" class="active" onclick="backToTop()">Figs
+        <i id:"dropIcon" onclick="dropDown()" class="fa fa-caret-down dropicon"></i>
+      </a>
     <a href="motion.html">BrikFigs Motion</a>
     <a href="U.html">BrikFigsU</a>
     <a href="about.html">About</a>
     <a href="javascript:void(0);" class="menu" onclick="navIcon()">
         <i class="fa fa-bars"></i>
     </a>
-  </nav>
+    <div id="dropNav" class="figFilters">
+      <button id="all" onclick="filterFigs('all')">All</button>
+      <button id="classic" onclick="filterFigs('classic')">Classic</button>
+      <button id="fantasy" onclick="filterFigs('fantasy')">Fantasy</button>
+      <button id="historical" onclick="filterFigs('historical')">Historical</button>
+      <button id="seasonal" onclick="filterFigs('seasonal')">Seasonal</button>
+      <button id="sports" onclick="filterFigs('sports')">Sports</button>
+    </div>
+  <nav>
 </header>
 
 <body>
   <div class="BFHome">
  <!-- Portfolio Gallery Grid -->
-    <ul class="FigsFilters">
-      <li><button onclick="filterFigs('all')">All</button></li>
-      <li><button onclick="filterFigs('classic')">Classic</button></li>
-      <li><button onclick="filterFigs('fantasy')">Fantasy</button></li>
-      <li><button onclick="filterFigs('historical')">Historical</button></li>
-      <li><button onclick="filterFigs('seasonal')">Seasonal</button></li>
-      <li><button onclick="filterFigs('sports')">Sports</button></li>
-    </ul>
+
     <div class="gallery">
     </div>
   </div>
@@ -51,10 +54,5 @@
     <input style="display:none;" type="text" onkeydown="escModal(evt)">
   </div>
 </body>
-
-<h1>BrikFigs</h1>
-<footer>
-  <p> LEGO and the LEGO logo are a trademarks of the LEGO Group of companies which does not sponsor, authorize or endorse BrikFigs or BrikFigs.com
-</footer>
 
 </html>

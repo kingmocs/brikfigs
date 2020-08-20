@@ -35,10 +35,22 @@ img {
 }
 
 @media (hover: hover) {
-  nav a:hover {
+  nav a:not(.active):hover{
     background-color: #005e8a;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+  }
+  nav :hover .dropicon{
+    display: inline-block;
+    float: right;
+    position: inherit;
+  }
+  .figFilters button:hover{
+    background-color: #005e8a !important;
+    cursor: pointer;
+  }
+  nav .dropicon{
+    display: none;
   }
   .gallery div:hover{
     position: relative;
@@ -175,7 +187,15 @@ nav a{
   transition: all 0.2s ease;
 }
 
-nav a.active {
+@media (hover: none){
+  nav .dropicon{
+    display: inline-block;
+    float: right;
+    position: inherit;
+  }
+}
+
+nav .active {
   background-color: #00a2e8;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -183,6 +203,35 @@ nav a.active {
 
  .topnav .menu{
   display: none;
+}
+
+.figFilters {
+  display: none;
+}
+
+.show button{
+display: inline-block;
+width: 16.6666%;
+float: left;
+background-color: inherit;
+border: none;
+outline: none;
+font-size: 20pt;
+text-align: center;
+color: white;
+text-decoration: none;
+white-space: nowrap;
+-webkit-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+
+.show {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  background-color: #aaaaaa;
+  float: center;
+  margin-bottom: auto;
 }
 
   @media screen and (max-width: 900px) {
@@ -215,7 +264,6 @@ nav a.active {
     width: auto;
   }
 }
-
 
 /*Brikfigs Home Section-------------------------------------------------------*/
 .BFHome{
@@ -319,33 +367,3 @@ nav a.active {
 }
 
 /*Figs Page-----------------*-------------------------------------------------*/
-ul.FigsFilters {
-  overflow: hidden;
-  background-color: #aaaaaa;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  list-style-type: none;
-  float: center;
-}
-
-ul.FigsFilters li{
-  list-style: none;
-  display: inline;
-  padding: none;
-  float: left;
-}
-
-.FigsFilters button{
-background-color: #aaaaaa;
-width: 100%;
-margin: auto;
-border: none;
-outline: none;
-font-size: 20pt;
-text-align: center;
-color: white;
-text-decoration: none;
-white-space: nowrap;
--webkit-transition: all 0.2s ease;
-transition: all 0.2s ease;
-}

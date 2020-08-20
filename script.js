@@ -170,8 +170,14 @@ function changeMotion(card_delay, i){
 }
 
 function filterFigs(filter){
+  var btn = document.getElementById(filter);
+  var t = document.getElementById("dropNav");
+  l = t.children.length;
+  for (i = 0; i < l; i++){
+    t.children[i].style.backgroundColor = "#aaaaaa";
+  }
+  btn.style.backgroundColor = "#005e8a";
   var x = document.querySelector(".gallery");
-  //console.log(x);
   var y; //div
   var z; //img
   while (x.hasChildNodes() === true){
@@ -180,8 +186,6 @@ function filterFigs(filter){
   //console.log(filter,"-------------------------------");
   for(i = 0; i < bf_count; i++){
     if(bf_data[i].tags.includes(filter) === true){
-      //console.log(bf_data[i].name)
-      //
       y = document.createElement("DIV");
       y.style.backgroundColor = bf_data[i].background;
       y.id = "fig_" + i;
@@ -192,9 +196,6 @@ function filterFigs(filter){
       y.appendChild(z);
       x.appendChild(y);
     }
-    //else{
-    //  x.removeChild(x.childNodes[]);
-    //}
   }
 }
 
@@ -220,4 +221,19 @@ function figFadeIn(x, opacity){
     x.style.opacity = opacity;
     opacity += 0.1;
   }, 50);
+}
+
+function dropDown(){
+  var x = document.getElementById("dropNav");
+  if (x.className === "figFilters") {
+    x.className += " show";
+
+  } else {
+    x.className = "figFilters";
+  }
+}
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
