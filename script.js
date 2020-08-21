@@ -33,18 +33,17 @@ function getID(clicked_id){
 
 function navIcon() {
   var x = document.getElementById("navbar");
-  var y = document.getElementById("dropNav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
-    //y.className = "figFilters";
   }
 }
 
 window.onload = function(){
 loadDoc("brikfigs.txt", bfData);
 loadDoc("brikfigs_motion.txt", bfmData);
+dropDown();
 }
 
 function loadDoc(url, cFunction) {
@@ -231,16 +230,29 @@ function dropDown(){
   var z = document.getElementById("dropIcon");
   if (window.innerWidth <= 900 || window.outerWidth <= 900){
     z.insertAdjacentElement("afterend", x);
-    console.log("working");
+    z.className = "fa fa-caret-right dropicon";
   }
   else{
     y.appendChild(x);
+    z.className = "fa fa-caret-dpwn dropicon";
   }
   if (x.className === "figFilters") {
     x.className += " show";
+    if (window.innerWidth <= 900 || window.outerWidth <= 900){
+      z.className = "fa fa-caret-left dropicon";
+    }
+    else{
+      z.className = "fa fa-caret-up dropicon";
+    }
     console.log("show");
   } else {
     x.className = "figFilters";
+    if (window.innerWidth <= 900 || window.outerWidth <= 900){
+      z.className = "fa fa-caret-right dropicon";
+    }
+    else{
+      z.className = "fa fa-caret-down dropicon";
+    }
     console.log("hide");
   }
 }
@@ -251,10 +263,22 @@ function updateDropMenu(){
   var z = document.getElementById("dropIcon");
   if (window.innerWidth <= 900 || window.outerWidth <= 900){
     z.insertAdjacentElement("afterend", y);
-    console.log("working");
+    if(y.classList.contains("show") === true){
+      z.className = "fa fa-caret-left dropicon";
+    }
+    else{
+      z.className = "fa fa-caret-right dropicon";
+    }
   }
   else{
     x.appendChild(y);
+    z.className = "fa fa-caret-down dropicon";
+    if(y.classList.contains("show") === true){
+      z.className = "fa fa-caret-up dropicon";
+    }
+    else{
+      z.className = "fa fa-caret-down dropicon";
+    }
   }
 }
 

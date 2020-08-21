@@ -40,17 +40,17 @@ img {
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
-  nav :hover .dropicon{
-    display: inline-block;
-    float: center;
-    position: inherit;
+  nav .dropicon{
+    display: none !important;
   }
+  nav :hover .dropicon{
+      display: inline-block !important;
+      float: center;
+      position: inherit;
+    }
   .figFilters button:hover{
     background-color: #005e8a !important;
     cursor: pointer;
-  }
-  nav .dropicon{
-    display: none;
   }
   .gallery div:hover{
     position: relative;
@@ -76,10 +76,19 @@ img {
   }
 }
 @media (hover: none){
-  nav .dropicon{
-    display: inline-block;
-    float: center;
-    position: inherit;
+  @media screen and (max-width: 900px){
+    nav .fa-caret-right{
+      display: inline-block;
+      float: center;
+      position: inherit;
+    }
+  }
+  @media screen and (min-width: 901px){
+    nav .fa-caret-down{
+      display: inline-block;
+      float: center;
+      position: inherit;
+    }
   }
 }
 
