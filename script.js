@@ -33,10 +33,12 @@ function getID(clicked_id){
 
 function navIcon() {
   var x = document.getElementById("navbar");
+  var y = document.getElementById("dropNav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
+    //y.className = "figFilters";
   }
 }
 
@@ -225,11 +227,26 @@ function figFadeIn(x, opacity){
 
 function dropDown(){
   var x = document.getElementById("dropNav");
+  var y = document.getElementById("navbar");
   if (x.className === "figFilters") {
     x.className += " show";
-
+    console.log("show");
   } else {
     x.className = "figFilters";
+    console.log("hide");
+  }
+}
+
+function updateDropMenu(){
+  var x = document.getElementById("navbar");
+  var y = document.getElementById("dropNav");
+  var z = document.getElementById("dropIcon");
+  if (window.innerWidth <= 900 || window.outerWidth <= 900){
+    z.insertAdjacentElement("afterend", y);
+    console.log("working");
+  }
+  else{
+    x.appendChild(y);
   }
 }
 

@@ -42,7 +42,7 @@ img {
   }
   nav :hover .dropicon{
     display: inline-block;
-    float: right;
+    float: center;
     position: inherit;
   }
   .figFilters button:hover{
@@ -73,6 +73,13 @@ img {
     background-color: #005e8a;
     /*-webkit-border-radius: 10px;
     border-radius: 10px;*/
+  }
+}
+@media (hover: none){
+  nav .dropicon{
+    display: inline-block;
+    float: center;
+    position: inherit;
   }
 }
 
@@ -187,14 +194,6 @@ nav a{
   transition: all 0.2s ease;
 }
 
-@media (hover: none){
-  nav .dropicon{
-    display: inline-block;
-    float: right;
-    position: inherit;
-  }
-}
-
 nav .active {
   background-color: #00a2e8;
   -webkit-border-radius: 10px;
@@ -232,6 +231,7 @@ transition: all 0.2s ease;
   background-color: #aaaaaa;
   float: center;
   margin-bottom: auto;
+  border-radius: 10px;
 }
 
   @media screen and (max-width: 900px) {
@@ -262,6 +262,18 @@ transition: all 0.2s ease;
     display: block;
     text-align: left;
     width: auto;
+  }
+  .show{
+    display:block !important;
+    width: auto;
+    padding: auto;
+    float: right;
+    position: relative;
+  }
+  .show button{
+    float: none;
+    display: block !important;
+    width: 100%;
   }
 }
 
