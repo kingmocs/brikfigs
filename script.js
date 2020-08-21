@@ -228,6 +228,14 @@ function figFadeIn(x, opacity){
 function dropDown(){
   var x = document.getElementById("dropNav");
   var y = document.getElementById("navbar");
+  var z = document.getElementById("dropIcon");
+  if (window.innerWidth <= 900 || window.outerWidth <= 900){
+    z.insertAdjacentElement("afterend", x);
+    console.log("working");
+  }
+  else{
+    y.appendChild(x);
+  }
   if (x.className === "figFilters") {
     x.className += " show";
     console.log("show");
