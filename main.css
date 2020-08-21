@@ -239,8 +239,7 @@ transition: all 0.2s ease;
   overflow: hidden;
   background-color: #aaaaaa;
   float: center;
-  margin-bottom: auto;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
   @media screen and (max-width: 900px) {
@@ -272,12 +271,14 @@ transition: all 0.2s ease;
     text-align: left;
     width: auto;
   }
+
   .show{
     display:block !important;
     width: auto;
     padding: auto;
     float: right;
     position: relative;
+    border-radius: 10px;
   }
   .show button{
     float: none;
