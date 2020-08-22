@@ -179,7 +179,7 @@ function filterFigs(filter){
     t.children[i].style.backgroundColor = "#aaaaaa";
   }
   btn.style.backgroundColor = "#005e8a";
-  var x = document.querySelector(".gallery");
+  var x = document.querySelector(".figsgallery");
   var y; //div
   var z; //img
   while (x.hasChildNodes() === true){
@@ -289,7 +289,7 @@ function updateDropMenu(){
 
 function scrollToTop(){
   scroll({
-  top: 0,
-  behavior: "smooth"
-});
+    top: 0,
+    behavior: "smooth"
+  });
 }

@@ -60,6 +60,7 @@ img {
     box-shadow: 5px 5px 10px #444444;
     cursor: pointer;
   }
+
   .BFMotionHome div:not(.BFMotionLogo):hover{
     cursor: pointer;
     position: relative;
@@ -317,7 +318,6 @@ transition: all 0.2s ease;
   display: grid;
   grid-gap: 1%;
   justify-content: space-evenly;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -394,3 +394,10 @@ transition: all 0.2s ease;
 }
 
 /*Figs Page-----------------*-------------------------------------------------*/
+
+.figsgallery {
+  display: grid;
+  grid-gap: 1%;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
