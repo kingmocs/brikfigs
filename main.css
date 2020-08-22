@@ -203,6 +203,7 @@ nav a{
   transition: all 0.2s ease;
 }
 
+
 nav .active {
   background-color: #00a2e8;
   -webkit-border-radius: 10px;
@@ -215,6 +216,10 @@ nav .active {
 
 .figFilters {
   display: none;
+}
+
+.dropIcon{
+  z-index: 4;
 }
 
 .show button{

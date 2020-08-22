@@ -4,6 +4,7 @@ var bf_count;
 var bfm_data = [];
 let bfm_count;
 
+
 function getID(clicked_id){
   // Get the modal
   var modal = document.getElementById("myModal");
@@ -41,9 +42,9 @@ function navIcon() {
 }
 
 window.onload = function(){
-loadDoc("brikfigs.txt", bfData);
-loadDoc("brikfigs_motion.txt", bfmData);
-dropDown();
+  loadDoc("brikfigs.txt", bfData);
+  loadDoc("brikfigs_motion.txt", bfmData);
+  dropDown();
 }
 
 function loadDoc(url, cFunction) {
@@ -198,6 +199,8 @@ function filterFigs(filter){
       x.appendChild(y);
     }
   }
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0;
 }
 
 function figFadeOut(x){
@@ -228,6 +231,7 @@ function dropDown(){
   var x = document.getElementById("dropNav");
   var y = document.getElementById("navbar");
   var z = document.getElementById("dropIcon");
+
   if (window.innerWidth <= 900 || window.outerWidth <= 900){
     z.insertAdjacentElement("afterend", x);
     z.className = "fa fa-caret-right dropicon";
@@ -255,6 +259,7 @@ function dropDown(){
     }
     console.log("hide");
   }
+
 }
 
 function updateDropMenu(){
@@ -282,7 +287,9 @@ function updateDropMenu(){
   }
 }
 
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+function scrollToTop(){
+  scroll({
+  top: 0,
+  behavior: "smooth"
+});
 }
