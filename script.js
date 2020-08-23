@@ -179,24 +179,38 @@ function filterFigs(filter){
     t.children[i].style.backgroundColor = "#aaaaaa";
   }
   btn.style.backgroundColor = "#005e8a";
-  var x = document.querySelector(".figsgallery");
+  var x = document.querySelector(".figsgallery"); //gallery
   var y; //div
   var z; //img
+  var nme; //text
+  var pcs; //part count
+  var dv;
   while (x.hasChildNodes() === true){
     x.removeChild(x.firstChild);
   }
-  //console.log(filter,"-------------------------------");
   for(i = 0; i < bf_count; i++){
     if(bf_data[i].tags.includes(filter) === true){
       y = document.createElement("DIV");
+      y.className ="container";
       y.style.backgroundColor = bf_data[i].background;
       y.id = "fig_" + i;
       y.addEventListener("click", function(){ getID(this.id); });
       z = document.createElement("IMG");
       z.alt = bf_data[i].name;
       z.src = bf_data[i].image;
+      dv = document.createElement("DIV");
+      dv.className = "figinfo";
+      nme = document.createElement("H2");
+      nme.className = "nme";
+      nme.innerHTML = bf_data[i].name;
+      pcs = document.createElement("H3");
+      pcs.className = "pcs";
+      pcs.innerHTML = "Pieces: " + bf_data[i].pieces;
       y.appendChild(z);
       x.appendChild(y);
+      dv.appendChild(nme);
+      dv.appendChild(pcs);
+      y.appendChild(dv);
     }
   }
   document.body.scrollTop = 0; // For Safari

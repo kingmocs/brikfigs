@@ -366,9 +366,9 @@ transition: all 0.2s ease;
 /*BrikFigsU Section Home Page-------------------------------------------------*/
 
 .BFUHome {
+  display: grid;
   background-color: #caf0c2;
   border-radius: 25px;
-  display: grid;
   grid-gap: 1%;
   justify-content: space-evenly;
   grid-template-columns: 1fr 1fr;
@@ -378,13 +378,8 @@ transition: all 0.2s ease;
 .BFUHome div{
   display: block;
   padding: 2%;
-  margin: 4%;
   -webkit-border-radius: 25px;
   border-radius: 25px;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
 }
 
 .BFULogo img{
@@ -393,23 +388,56 @@ transition: all 0.2s ease;
   margin-top: 6%
 }
 
-/*Figs Page-----------------*-------------------------------------------------*/
+/*Figs Page-------------------------------------------------------------------*/
+
+.FigsPage{
+  margin: 2%;
+}
 
 .figsgallery {
   display: grid;
-  grid-gap: 1%;
+  grid-gap: 10px;
   justify-content: space-evenly;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
 }
 
-@media screen and (max-width: 900px){
-  .figsgallery {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.figsgallery img{
+  display: block;
+  width: 100%
 }
 
-@media screen and (max-width: 600px){
-  .figsgallery {
-    grid-template-columns: 1fr 1fr;
-  }
+.figsgallery .container {
+  display: block;
+  border-radius: 25px;
+}
+
+.figsgallery .figinfo{
+  background-color: #ffffffaa;
+  display: block;
+  border-radius: 0px 0px 25px 25px;
+  float: center;
+  position: relative;
+  vertical-align: baseline;
+  margin: 0;
+}
+
+.figsgallery .nme{
+  display: block;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  float: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.figsgallery .pcs{
+  white-space: nowrap;
+  float: center;
+  color: #444444;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
