@@ -55,7 +55,7 @@ img {
   .gallery div:hover{
     position: relative;
     z-index: 1;
-    transform: scale(1.33, 1.33);
+    transform: scale(1.25, 1.25);
     -webkit-box-shadow: 5px 5px 10px #444444;
     box-shadow: 5px 5px 10px #444444;
     cursor: pointer;
@@ -65,7 +65,7 @@ img {
     cursor: pointer;
     position: relative;
     z-index: 1;
-    transform: scale(1.33, 1.33);
+    transform: scale(1.25, 1.25);
     -webkit-box-shadow: 5px 5px 10px #444444;
     box-shadow: 5px 5px 10px #444444;
     cursor: pointer;
@@ -74,6 +74,9 @@ img {
     background-color: #005e8a;
     /*-webkit-border-radius: 10px;
     border-radius: 10px;*/
+  }
+  .FigsPage .container:hover{
+    cursor: pointer;
   }
 }
 @media (hover: none){
@@ -225,7 +228,7 @@ nav .active {
 
 .show button{
 display: inline-block;
-width: 16.6666%;
+width: 20%;
 float: left;
 background-color: inherit;
 border: none;
@@ -440,4 +443,13 @@ transition: all 0.2s ease;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+@media screen and (min-width: 1200px){
+  .figsgallery .nme{
+    font-size: 48px;
+  }
+  .figsgallery .pcs{
+    font-size: 36px;
+  }
 }
