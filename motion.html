@@ -29,12 +29,18 @@
   </nav>
 </header>
 
-<body>
-<h1>BrikFigs Motion</h1>
-</body>
+<body onresize="updateDropMenu()">
+  <div class="MotionPage">
+    <div class="motiongallery">
+    </div>
+  </div>
 
-<footer>
-  <p> LEGO and the LEGO logo are a trademarks of the LEGO Group of companies which does not sponsor, authorize or endorse BrikFigs or BrikFigs.com
-</footer>
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <h1 id="caption"></h1>
+    <input style="display:none;" type="text" onkeydown="escModal(evt)">
+  </div>
+</body>
 
 </html>

@@ -78,7 +78,10 @@ function bfmData(xhttp){
     bfm_data.push(JSON.parse(xhttp.responseText)[j]);
   }
   //console.log(bfm_data);
-  if (window.location.href.match('index.html') != null) {
+  if (window.location.href.match('motion.html') != null) {
+    motionGallery();
+  }
+  else{
     populateMotion();
   }
 }
@@ -240,6 +243,44 @@ function figFadeIn(x, opacity){
     opacity += 0.1;
   }, 50);
 }
+
+function motionGallery(){
+  var x = document.querySelector(".motiongallery"); //gallery
+  var y; //div
+  var z; //img
+  var nme; //text
+  var pcs; //part count
+  var dv;
+  while (x.hasChildNodes() === true){
+    x.removeChild(x.firstChild);
+  }
+  for(i = 0; i < bfm_count; i++){
+      y = document.createElement("DIV");
+      y.className ="container";
+      y.style.backgroundColor = bfm_data[i].background;
+      y.id = "motion_" + i;
+      y.addEventListener("click", function(){ getID(this.id); });
+      z = document.createElement("IMG");
+      z.alt = bfm_data[i].name;
+      z.src = bfm_data[i].image;
+      dv = document.createElement("DIV");
+      dv.className = "motioninfo";
+      nme = document.createElement("H2");
+      nme.className = "nme";
+      nme.innerHTML = bfm_data[i].name;
+      pcs = document.createElement("H3");
+      pcs.className = "pcs";
+      pcs.innerHTML = "Pieces: " + bfm_data[i].pieces;
+      y.appendChild(z);
+      x.appendChild(y);
+      dv.appendChild(nme);
+      dv.appendChild(pcs);
+      y.appendChild(dv);
+  }
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0;
+}
+
 
 function dropDown(){
   var x = document.getElementById("dropNav");
