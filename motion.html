@@ -21,7 +21,7 @@
     <a href="index.html">Home</a>
     <a href="figs.html">Figs</a>
     <a href="javascript:void(0);" class="active" onclick="scrollToTop()">BrikFigs Motion</a>
-    <a href="U.html">BrikFigsU</a>
+    <!-- <a href="U.html">BrikFigsU</a> -->
     <a href="about.html">About</a>
     <a href="javascript:void(0);" class="menu" onclick="navIcon()">
         <i class="fa fa-bars"></i>
@@ -30,6 +30,14 @@
 </header>
 
 <body onresize="updateDropMenu()">
+  <div class="BFMotionHome">
+    <div class="BFMotionLogo">
+        <img src="images/brikfigs_motion-logo.png" alt="BrikFigs Motion Logo">
+    </div>
+    <div onclick="getID(this.id)" id="motion-combo">
+      <img src="images/brikfigs_motion-logo.png" alt="BrikFigs Motion">
+    </div>
+  </div>
   <div class="MotionPage">
     <div class="motiongallery">
     </div>

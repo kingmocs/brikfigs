@@ -2,7 +2,9 @@
 var bf_data = [];
 var bf_count;
 var bfm_data = [];
-let bfm_count;
+var bfm_count;
+var bfm_combo = [];
+var bfm_combo_count;
 
 
 function getID(clicked_id){
@@ -64,10 +66,12 @@ function bfData(xhttp){
   for(j = 0; j < bf_count; j++){
     bf_data.push(JSON.parse(xhttp.responseText)[j]);
   }
-  if (window.location.href.match('figs.html') != null) {
+  if (window.location.href.match('figs.html') != null)
+ {
     filterFigs("all");
   }
-  else{
+  else if (window.location.href.match('index.html') != null ||
+window.location.hostname != null){
     populateGallery();
   }
 }
@@ -77,18 +81,18 @@ function bfmData(xhttp){
   for(j = 0; j < bfm_count; j++){
     bfm_data.push(JSON.parse(xhttp.responseText)[j]);
   }
-  //console.log(bfm_data);
   if (window.location.href.match('motion.html') != null) {
-    motionGallery();
+    motionPage();
   }
-  else{
+  else if (window.location.href.match('index.html') != null ||
+window.location.hostname != null){
     populateMotion();
   }
 }
 
 function populateGallery(){
-  let min_time = 20000;
-  let max_time = 40000;
+  let min_time = 15000;
+  let max_time = 30000;
   var gal_size = 9;
   let card_id = "card_";
   let card = Array(gal_size);
@@ -146,18 +150,20 @@ function fadeIn(card_id, opacity){
 }
 
 function populateMotion(xhttp){
-  var card_delay = 20000;
+  var card_delay = 15000;
   var x =  Math.floor(Math.random() * (bfm_count));
   document.getElementById("card_09").firstElementChild.alt = bfm_data[x].name;
   document.getElementById("card_09").firstElementChild.src = bfm_data[x].image;
   document.getElementById("card_09").style.backgroundColor = bfm_data[x].background;
-  window.setTimeout(changeMotion, card_delay, card_delay, bfm_count, x);
+  window.setTimeout(changeMotion, card_delay, card_delay, x);
 }
 
 function changeMotion(card_delay, i){
+  var v;
   do{
-    v =  Math.floor(Math.random() * 3);
+    v =  Math.floor(Math.random() * bfm_count);
   }while(v === i);
+  console.log(card_delay);
   let opacity = 1;
   var timer = setInterval(function(){
     if(opacity < 0.1){
@@ -244,16 +250,47 @@ function figFadeIn(x, opacity){
   }, 50);
 }
 
-function motionGallery(){
+function motionHeader(card_delay, i, cimg){
+  var v;
+  do{
+    v =  Math.floor(Math.random() * bfm_combo_count);
+  }while(v === i);
+  let opacity = 1;
+  var timer = setInterval(function(){
+    if(opacity < 0.1){
+      clearInterval(timer);
+      cimg.firstElementChild.alt = bfm_combo[v].name;
+      cimg.firstElementChild.src = bfm_combo[v].image;
+      cimg.style.backgroundColor = bfm_combo[v].background;
+      fadeIn("motion-combo", opacity);
+    }
+    cimg.firstElementChild.style.opacity = opacity;
+    cimg.style.opacity = opacity;
+    opacity -= 0.1;
+  }, 50);
+  window.setTimeout(motionHeader, card_delay, card_delay, v, cimg);
+}
+
+function motionPage(){
+  var cimg = document.getElementById("motion-combo");
+  for(j = 0; j < bf_count; j++){
+    if(bf_data[j].motion.name != null){
+      bfm_combo.push(bf_data[j].motion);
+    }
+  }
+  bfm_combo_count = bfm_combo.length;
+  var card_delay = 15000;
+  var v =  Math.floor(Math.random() * bfm_combo_count);
+  cimg.firstElementChild.alt = bfm_combo[v].name;
+  cimg.firstElementChild.src = bfm_combo[v].image;
+  cimg.style.backgroundColor = bfm_combo[v].background;
+  window.setTimeout(motionHeader, card_delay, card_delay, v, cimg);
+
   var x = document.querySelector(".motiongallery"); //gallery
   var y; //div
   var z; //img
   var nme; //text
   var pcs; //part count
-  var dv;
-  while (x.hasChildNodes() === true){
-    x.removeChild(x.firstChild);
-  }
   for(i = 0; i < bfm_count; i++){
       y = document.createElement("DIV");
       y.className ="container";
@@ -277,12 +314,10 @@ function motionGallery(){
       dv.appendChild(pcs);
       y.appendChild(dv);
   }
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0;
 }
 
-
 function dropDown(){
+    if (window.location.href.match('figs.html') != null){
   var x = document.getElementById("dropNav");
   var y = document.getElementById("navbar");
   var z = document.getElementById("dropIcon");
@@ -314,10 +349,11 @@ function dropDown(){
     }
     console.log("hide");
   }
-
+  }
 }
 
 function updateDropMenu(){
+    if (window.location.href.match('figs.html') != null){
   var x = document.getElementById("navbar");
   var y = document.getElementById("dropNav");
   var z = document.getElementById("dropIcon");
@@ -340,6 +376,7 @@ function updateDropMenu(){
       z.className = "fa fa-caret-down dropicon";
     }
   }
+}
 }
 
 function scrollToTop(){
