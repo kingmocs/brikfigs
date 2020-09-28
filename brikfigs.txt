@@ -132,18 +132,6 @@
       }
   },
   {
-    "name": "Mariachi Band",
-    "image": "images/mariachi_band.png",
-    "pieces": 176,
-    "background": "#CDAC26",
-    "tags": ["all", "seasonal", "fantasy"],
-    "motion": {
-      "name": null,
-      "image": null,
-      "background": null
-      }
-  },
-  {
     "name": "Mr. & Mrs. Clause",
     "image": "images/mr_and_mrs_clause.png",
     "pieces": 112,
@@ -221,6 +209,42 @@
     "pieces": 31,
     "background": "#E0C451",
     "tags": ["all", "classic", "seasonal"],
+    "motion": {
+      "name": null,
+      "image": null,
+      "background": null
+      }
+  },
+  {
+    "name": "Skeleton Mariachi Guitarist",
+    "image": "images/guitarist.png",
+    "pieces": 48,
+    "background": "#088CBD",
+    "tags": ["all", "classic", "fantasy", "seasonal"],
+    "motion": {
+      "name": null,
+      "image": null,
+      "background": null
+      }
+  },
+  {
+    "name": "Skeleton Mariachi Maracas Player",
+    "image": "images/maracas_player.png",
+    "pieces": 39,
+    "background": "#E02626",
+    "tags": ["all", "classic", "fantasy", "seasonal"],
+    "motion": {
+      "name": null,
+      "image": null,
+      "background": null
+      }
+  },
+  {
+    "name": "Skeleton Mariachi Trumpeter",
+    "image": "images/trumpeter.png",
+    "pieces": 38,
+    "background": "#E0751d",
+    "tags": ["all", "classic", "fantasy", "seasonal"],
     "motion": {
       "name": null,
       "image": null,
